@@ -1,0 +1,119 @@
+2026-07-24T16:52:08.871005Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2026-07-24T16:52:08.873282Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday", pattern: "**/*", negated: false }
+2026-07-24T16:52:08.884423Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2026-07-24T16:52:08.884503Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday" }
+2026-07-24T16:52:08.889594Z  INFO discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.889825Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.935027Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.937371Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\hotels\\page.js"
+2026-07-24T16:52:08.937593Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\international-tours\\page.js"
+2026-07-24T16:52:08.937774Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\shared\\Breadcrumb.jsx"
+2026-07-24T16:52:08.937805Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\GalleryPreview.jsx"
+2026-07-24T16:52:08.937777Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\layout.js"
+2026-07-24T16:52:08.937977Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\shared\\FaqAccordion.jsx"
+2026-07-24T16:52:08.937988Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\Hero.jsx"
+2026-07-24T16:52:08.938146Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\shared\\LegalPageTemplate.jsx"
+2026-07-24T16:52:08.938168Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\luxury-holidays\\page.js"
+2026-07-24T16:52:08.938312Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\shared\\PackageCard.jsx"
+2026-07-24T16:52:08.938350Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\packages\\page.js"
+2026-07-24T16:52:08.938359Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\HowWeWork.jsx"
+2026-07-24T16:52:08.938485Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\shared\\PageHero.jsx"
+2026-07-24T16:52:08.938519Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\PackagesShowcase.jsx"
+2026-07-24T16:52:08.938517Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\packages\\[slug]\\page.jsx"
+2026-07-24T16:52:08.938636Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\shared\\ServicePageTemplate.jsx"
+2026-07-24T16:52:08.938680Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\page.js"
+2026-07-24T16:52:08.938701Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\PopularDestinations.jsx"
+2026-07-24T16:52:08.938768Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\AGENTS.md"
+2026-07-24T16:52:08.938780Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\shared\\ShareButtons.jsx"
+2026-07-24T16:52:08.938834Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\privacy-policy\\page.js"
+2026-07-24T16:52:08.938955Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\ui\\Button.jsx"
+2026-07-24T16:52:08.938864Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\Services.jsx"
+2026-07-24T16:52:08.939016Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\CLAUDE.md"
+2026-07-24T16:52:08.939141Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\ui\\Container.jsx"
+2026-07-24T16:52:08.939272Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\eslint.config.mjs"
+2026-07-24T16:52:08.939298Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\ui\\Counter.jsx"
+2026-07-24T16:52:08.939335Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\SpecialOffers.jsx"
+2026-07-24T16:52:08.939420Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\jsconfig.json"
+2026-07-24T16:52:08.939453Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\ui\\FadeIn.jsx"
+2026-07-24T16:52:08.939495Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\Stats.jsx"
+2026-07-24T16:52:08.939566Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\next.config.mjs"
+2026-07-24T16:52:08.939613Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\ui\\Logo.jsx"
+2026-07-24T16:52:08.939651Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\Testimonials.jsx"
+2026-07-24T16:52:08.939773Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\ui\\RatingStars.jsx"
+2026-07-24T16:52:08.939800Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\WhyChooseUs.jsx"
+2026-07-24T16:52:08.939936Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\ui\\SectionHeading.jsx"
+2026-07-24T16:52:08.939936Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\layout\\FloatingWidgets.jsx"
+2026-07-24T16:52:08.940081Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\ui\\SocialIcons.jsx"
+2026-07-24T16:52:08.940101Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\layout\\Footer.jsx"
+2026-07-24T16:52:08.940205Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\package.json"
+2026-07-24T16:52:08.940217Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\lib\\data\\destination-images.js"
+2026-07-24T16:52:08.940243Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\lib\\data\\blogs.js"
+2026-07-24T16:52:08.940359Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\postcss.config.mjs"
+2026-07-24T16:52:08.940414Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\lib\\data\\content.js"
+2026-07-24T16:52:08.940439Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\refund-policy\\page.js"
+2026-07-24T16:52:08.940471Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\lib\\data\\destinations-seed.js"
+2026-07-24T16:52:08.940599Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\sitemap-page\\page.js"
+2026-07-24T16:52:08.940625Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\religious-tours\\page.js"
+2026-07-24T16:52:08.940755Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\sitemap.js"
+2026-07-24T16:52:08.940784Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\robots.js"
+2026-07-24T16:52:08.940854Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\lib\\data\\nav.js"
+2026-07-24T16:52:08.940907Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\terms-and-conditions\\page.js"
+2026-07-24T16:52:08.940948Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\package-detail\\PackageItinerary.jsx"
+2026-07-24T16:52:08.940977Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\weekend-getaways\\page.js"
+2026-07-24T16:52:08.941059Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\layout\\LoadingScreen.jsx"
+2026-07-24T16:52:08.941148Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\package-detail\\PackageReviews.jsx"
+2026-07-24T16:52:08.941185Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\gallery\\GalleryGrid.jsx"
+2026-07-24T16:52:08.941222Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\lib\\data\\packages.js"
+2026-07-24T16:52:08.941262Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\layout\\Navbar.jsx"
+2026-07-24T16:52:08.941299Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\package-detail\\StickyBookingCard.jsx"
+2026-07-24T16:52:08.941442Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\packages\\CategoryPageTemplate.jsx"
+2026-07-24T16:52:08.941530Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\README.md"
+2026-07-24T16:52:08.941555Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\BlogsPreview.jsx"
+2026-07-24T16:52:08.941574Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\package-detail\\PackageGallery.jsx"
+2026-07-24T16:52:08.941614Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\packages\\PackagesExplorer.jsx"
+2026-07-24T16:52:08.941712Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\about\\page.js"
+2026-07-24T16:52:08.941745Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\package-detail\\PackageInfoGrid.jsx"
+2026-07-24T16:52:08.941773Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\shared\\BookingForm.jsx"
+2026-07-24T16:52:08.941865Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\adventure-tours\\page.js"
+2026-07-24T16:52:08.941907Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\ContactCta.jsx"
+2026-07-24T16:52:08.941921Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\visa-assistance\\page.js"
+2026-07-24T16:52:08.941935Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\CategoryGrid.jsx"
+2026-07-24T16:52:08.942023Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\blog\\page.js"
+2026-07-24T16:52:08.942068Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\components\\home\\FaqHome.jsx"
+2026-07-24T16:52:08.942110Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\family-packages\\page.js"
+2026-07-24T16:52:08.942136Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\blog\\[slug]\\page.jsx"
+2026-07-24T16:52:08.942182Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\lib\\site.js"
+2026-07-24T16:52:08.942236Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\gallery\\page.js"
+2026-07-24T16:52:08.942275Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\faq\\page.js"
+2026-07-24T16:52:08.942283Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\cancellation-policy\\page.js"
+2026-07-24T16:52:08.942333Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\flight-booking\\page.js"
+2026-07-24T16:52:08.942386Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\group-tours\\page.js"
+2026-07-24T16:52:08.942433Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\honeymoon-packages\\page.js"
+2026-07-24T16:52:08.942455Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\contact\\page.js"
+2026-07-24T16:52:08.942481Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\corporate-tours\\page.js"
+2026-07-24T16:52:08.942533Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\domestic-tours\\page.js"
+2026-07-24T16:52:08.942533Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\testimonials\\page.js"
+2026-07-24T16:52:08.942621Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\lib\\images.js"
+2026-07-24T16:52:08.943245Z  INFO discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.943283Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.943297Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.943313Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.947832Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.947906Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.947933Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.947944Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-07-24T16:52:08.948163Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "C:\\Users\\AK COMPUTER SERVICES\\Desktop\\pkp2-holiday\\src\\app\\globals.css"
+2026-07-24T16:52:08.948190Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.948202Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.948309Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.948450Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.948474Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.949472Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.952167Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.952253Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.952273Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.952488Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.955144Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.955184Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-24T16:52:08.955198Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-24T16:52:08.996584Z  INFO get_globs: tailwindcss_oxide::scanner: exit
