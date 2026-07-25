@@ -13,7 +13,7 @@ const quickTabs = getFeaturedPackages(4);
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-navy-dark pt-28 pb-16 sm:pt-32">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-navy-dark pt-24 sm:pt-32 pb-16 sm:pt-32">
       <motion.div
         initial={{ scale: 1.15 }}
         animate={{ scale: 1 }}
@@ -47,16 +47,16 @@ export default function Hero() {
       <Container className="relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="inline-flex items-center gap-2 glass text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-full mb-6">
+            <span className="inline-flex items-center gap-2 glass text-white text-xs sm:text-sm font-semibold px-3 py-1.5 text-[11px] sm:px-4 sm:py-2 sm:text-sm rounded-full mb-6">
               <Sparkles className="w-3.5 h-3.5 text-gold" /> India&apos;s Premium Luxury Travel Experience
             </span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-sans font-black uppercase text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.15] tracking-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="font-sans font-black uppercase text-white text-[32px] sm:text-5xl lg:text-6xl leading-[0.95] tracking-[-0.02em] max-w-[360px] sm:max-w-none"
           >
             Explore More. Travel Better.
             <br />
@@ -67,7 +67,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white/75 text-base sm:text-lg max-w-xl mt-6 leading-relaxed"
+            className="text-white/75 text-[15px] sm:text-lg max-w-xl mt-6 leading-relaxed"
           >
             PKP Holidays is a trusted travel agency crafting customized domestic & international tour packages, honeymoon escapes and luxury getaways, planned end-to-end for you.
           </motion.p>
@@ -76,25 +76,26 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-wrap items-center gap-4 mt-8"
+            className="flex flex-row items-center gap-3 mt-8 w-full lg:w-auto px-2 sm:px-0"
           >
             <Link
               href="/packages"
-              className="inline-flex items-center gap-2.5 bg-gold text-navy font-bold rounded-full pl-7 pr-2.5 py-2.5 hover:brightness-95 transition-all hover:-translate-y-0.5 shadow-lg shadow-gold/30"
+              className="inline-flex flex-1 lg:flex-none w-full lg:w-auto h-14 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold px-6 lg:px-8 text-[13px] lg:text-base font-bold text-navy shadow-lg shadow-gold/30 transition-all"
             >
               Explore Packages
-              <span className="w-9 h-9 rounded-full bg-navy text-white flex items-center justify-center">
-                <ArrowRight className="w-4 h-4" />
-              </span>
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy text-white">
+  <ArrowRight className="w-4 h-4" />
+</span>
             </Link>
             <a
-              href={`https://wa.me/${siteConfig.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 glass text-white font-semibold rounded-full px-7 py-3.5 hover:bg-white/25 transition-all hover:-translate-y-0.5"
-            >
-              <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
-            </a>
+  href={`https://wa.me/${siteConfig.whatsapp}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex flex-1 lg:flex-none w-full lg:w-auto h-14 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold text-navy px-6 lg:px-8 text-[13px] lg:text-base font-bold shadow-lg shadow-gold/30 hover:brightness-95 transition-all"
+>
+  <MessageCircle className="w-4 h-4 text-navy" />
+  WhatsApp
+</a>
           </motion.div>
 
           <motion.div
@@ -104,7 +105,7 @@ export default function Hero() {
             className="hidden sm:flex items-center flex-wrap gap-x-3 gap-y-3 mt-14 max-w-xl"
           >
             {quickTabs.map((pkg, i) => (
-              <div key={pkg.slug} className="flex items-center gap-3">
+              <div key={pkg.slug} className="flex items-center gap-2">
                 <Link
                   href={`/packages/${pkg.slug}`}
                   className={`text-sm sm:text-base font-semibold transition-colors ${

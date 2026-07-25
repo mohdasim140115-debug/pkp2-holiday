@@ -133,19 +133,51 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/45 text-xs text-center sm:text-left">
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-          </p>
-          <div className="flex items-center gap-5">
-            <Link href="/sitemap-page" className="text-white/45 text-xs hover:text-white transition-colors">
-              Sitemap
-            </Link>
-            <Link href="/contact" className="inline-flex items-center gap-1 text-xs font-semibold text-sky hover:text-white transition-colors group">
-              Start Planning <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-        </div>
+        <div className="pt-6 border-t border-white/10">
+  <div className="flex flex-col md:grid md:grid-cols-3 items-center gap-4">
+
+    {/* Left */}
+    <p className="text-white/45 text-xs text-center md:text-left">
+      © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+    </p>
+
+    {/* Center */}
+    <div className="text-center order-first md:order-none">
+      <span className="text-sm md:text-base text-white/60">
+        Created by{" "}
+        <a
+          href="https://deenxconsultancy.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-sky hover:text-white transition-colors"
+        >
+          Deenx Consultancy
+        </a>
+      </span>
+    </div>
+
+    {/* Right */}
+    <div className="flex items-center justify-center md:justify-end gap-5 flex-wrap">
+      <Link
+        href="/sitemap-page"
+        className="text-white/45 text-xs hover:text-white transition-colors"
+      >
+        Sitemap
+      </Link>
+
+      <Link
+        href="/contact"
+        className="inline-flex items-center gap-1 text-xs font-semibold text-sky hover:text-white transition-colors group"
+      >
+        Start Planning
+        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+      </Link>
+    </div>
+
+  </div>
+</div>
+
+        
       </Container>
     </footer>
   );
