@@ -1,8 +1,5 @@
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import FloatingWidgets from "@/components/layout/FloatingWidgets";
-import LoadingScreen from "@/components/layout/LoadingScreen";
+import SiteChrome from "@/components/layout/SiteChrome";
 import { siteConfig, fullAddress } from "@/lib/site";
 
 export const metadata = {
@@ -112,11 +109,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-        <LoadingScreen />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <FloatingWidgets />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
