@@ -1,10 +1,18 @@
 import CategoryPageTemplate from "@/components/packages/CategoryPageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Weekend Getaways — Quick Refreshing Escapes",
-  description: "Short on time? Explore PKP Holidays' best weekend getaway packages for a quick, refreshing escape from routine.",
-  alternates: { canonical: "/weekend-getaways" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/weekend-getaways", {
+    title: "Weekend Getaways — Quick Refreshing Escapes",
+    description: "Short on time? Explore PKP Holidays' best weekend getaway packages for a quick, refreshing escape from routine.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/weekend-getaways" },
+  };
+}
 
 export default function WeekendGetawaysPage() {
   return (

@@ -1,11 +1,19 @@
 import { Stamp, FileCheck2, Clock3, ShieldCheck, MessageSquareText, FileText, Send, ThumbsUp } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Visa Assistance — Hassle-Free Visa Processing",
-  description: "Get complete visa documentation and processing assistance for all major destinations with PKP Holidays' expert visa support team.",
-  alternates: { canonical: "/visa-assistance" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/visa-assistance", {
+    title: "Visa Assistance — Hassle-Free Visa Processing",
+    description: "Get complete visa documentation and processing assistance for all major destinations with PKP Holidays' expert visa support team.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/visa-assistance" },
+  };
+}
 
 const features = [
   { title: "All Visa Types", desc: "Tourist, business and transit visa assistance for 100+ countries.", icon: Stamp },

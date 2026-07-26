@@ -6,20 +6,16 @@ import { Search, SlidersHorizontal, X, Star } from "lucide-react";
 import Container from "@/components/ui/Container";
 import PackageCard from "@/components/shared/PackageCard";
 import clsx from "clsx";
+import categoryList from "../../../data/categories.json";
 
-const CATEGORY_OPTIONS = [
+const TYPE_OPTIONS = [
   { key: "domestic", label: "Domestic", type: true },
   { key: "international", label: "International", type: true },
-  { key: "honeymoon", label: "Honeymoon" },
-  { key: "family", label: "Family" },
-  { key: "adventure", label: "Adventure" },
-  { key: "religious", label: "Religious" },
-  { key: "luxury", label: "Luxury" },
-  { key: "weekend", label: "Weekend Getaway" },
-  { key: "group", label: "Group" },
-  { key: "beach", label: "Beach" },
-  { key: "hill-station", label: "Hill Station" },
-  { key: "wildlife", label: "Wildlife" },
+];
+
+const CATEGORY_OPTIONS = [
+  ...TYPE_OPTIONS,
+  ...categoryList.map((c) => ({ key: c.id, label: c.label })),
 ];
 
 const BUDGETS = [

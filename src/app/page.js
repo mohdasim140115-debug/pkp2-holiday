@@ -3,17 +3,23 @@ import PopularDestinations from "@/components/home/PopularDestinations";
 import PackagesShowcase from "@/components/home/PackagesShowcase";
 import Services from "@/components/home/Services";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
-import Testimonials from "@/components/home/Testimonials";
-import FaqHome from "@/components/home/FaqHome";
-import ContactCta from "@/components/home/ContactCta";
+import HomeReviews from "@/components/home/HomeReviews";
 import { getFeaturedPackages } from "@/lib/data/packages";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Premium Domestic & International Tour Packages",
-  description: siteConfig.description,
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/", {
+    title: "Premium Domestic & International Tour Packages",
+    description: siteConfig.description,
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/" },
+  };
+}
 
 export default function Home() {
   const featured = getFeaturedPackages(8);
@@ -32,9 +38,7 @@ export default function Home() {
       />
       <Services />
       <WhyChooseUs />
-      <Testimonials />
-      <FaqHome />
-      <ContactCta />
+      <HomeReviews />
     </>
   );
 }

@@ -8,16 +8,16 @@ import { whyChooseUs } from "@/lib/data/content";
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-navy py-16 sm:py-24 relative overflow-hidden">
+    <section className="bg-navy py-10 sm:py-14 relative overflow-hidden">
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-sky/10 rounded-full blur-3xl" />
-      <Container className="relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <Container className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-5 relative">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-[420px] rounded-3xl overflow-hidden luxury-shadow-lg"
+            className="relative h-80 rounded-3xl overflow-hidden luxury-shadow-lg"
           >
             <Image src="/destinations/manali.jpg" alt="PKP Holidays travel experience" fill className="object-cover" />
           </motion.div>
@@ -39,9 +39,9 @@ export default function WhyChooseUs() {
             title="Travel Planning Made Effortless & Personal"
             align="left"
             light
-            className="mb-10"
+            className="mb-6"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {whyChooseUs.map((item, i) => {
               const Icon = Icons[item.icon] || Icons.Sparkles;
               return (
@@ -51,14 +51,14 @@ export default function WhyChooseUs() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
-                  className="flex gap-4"
+                  className="flex gap-3"
                 >
-                  <span className="shrink-0 w-11 h-11 rounded-xl bg-sky/15 text-sky flex items-center justify-center">
-                    <Icon className="w-5 h-5" />
+                  <span className="shrink-0 w-9 h-9 rounded-xl bg-sky/15 text-sky flex items-center justify-center">
+                    <Icon className="w-4 h-4" />
                   </span>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="text-white font-semibold text-sm mb-0.5">{item.title}</h3>
+                    <p className="text-white/60 text-xs leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
               );

@@ -1,10 +1,18 @@
 import CategoryPageTemplate from "@/components/packages/CategoryPageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Group Tours — Travel Together, Save Together",
-  description: "Planning a trip with friends or extended family? Explore PKP Holidays' group tour packages with special group pricing.",
-  alternates: { canonical: "/group-tours" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/group-tours", {
+    title: "Group Tours — Travel Together, Save Together",
+    description: "Planning a trip with friends or extended family? Explore PKP Holidays' group tour packages with special group pricing.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/group-tours" },
+  };
+}
 
 export default function GroupToursPage() {
   return (

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "a43a5b51-ac5d-4c05-9614-db217f1357c3",
+    "packageSlug": "",
+    "packageName": "kashmr",
+    "name": "asim",
+    "rating": 4,
+    "comment": "sadfghjkl sakfhinjgbknlaojfigbnlks asfowehbjnlksjwefihgobf kc saofughijbncknibewfui fpawifebuf jsifewuobgifh j",
+    "status": "approved",
+    "createdAt": "2026-07-26T11:20:17.661Z"
+  },
+  {
+    "id": "679f917e-6cd4-4515-99af-f37da8fdf249",
+    "packageSlug": "",
+    "packageName": "Kashmir Honeymoon",
+    "name": "Ankit & Riya Sharma",
+    "rating": 5,
+    "comment": "PKP Holidays planned the most magical honeymoon for us in Kashmir. The houseboat stay and Gulmarg gondola ride were unforgettable. Every detail was handled perfectly!",
+    "status": "approved",
+    "createdAt": "2026-07-26T10:59:43.624Z"
+  },
+  {
+    "id": "9eae2b50-ff7a-4090-90f9-769839f90ee2",
+    "packageSlug": "",
+    "packageName": "Bali Family Trip",
+    "name": "Rohan Gupta",
+    "rating": 5,
+    "comment": "Traveled with my parents and kids to Bali — the itinerary was perfectly paced for all age groups. Our tour manager was extremely helpful throughout.",
+    "status": "approved",
+    "createdAt": "2026-07-25T10:59:43.625Z"
+  },
+  {
+    "id": "dd86ea55-779a-4f65-abc4-ee5f9dc3a4ef",
+    "packageSlug": "",
+    "packageName": "Dubai Getaway",
+    "name": "Simran Kaur",
+    "rating": 5,
+    "comment": "Best travel agency I've booked with! Dubai desert safari and Burj Khalifa visit were arranged flawlessly. Highly recommend PKP Holidays.",
+    "status": "approved",
+    "createdAt": "2026-07-24T10:59:43.625Z"
+  },
+  {
+    "id": "8fc19076-b25e-4ff4-b71e-82debcc7d545",
+    "packageSlug": "",
+    "packageName": "Kerala Backwaters",
+    "name": "Vivek & Family",
+    "rating": 5,
+    "comment": "Our Kerala houseboat experience was beyond expectations. Being from Ranchi, it was great to find a local agency offering such premium service.",
+    "status": "approved",
+    "createdAt": "2026-07-23T10:59:43.625Z"
+  },
+  {
+    "id": "a9e537ac-d358-4780-86ec-cc31a5504da2",
+    "packageSlug": "",
+    "packageName": "Switzerland Tour",
+    "name": "Neha Choudhary",
+    "rating": 5,
+    "comment": "A dream European vacation made effortless. The Jungfraujoch train ride was breathtaking. Thank you PKP Holidays for the flawless planning!",
+    "status": "approved",
+    "createdAt": "2026-07-22T10:59:43.625Z"
+  },
+  {
+    "id": "ce577480-750d-4d2a-82da-12b30c4e4c9e",
+    "packageSlug": "",
+    "packageName": "Andaman Honeymoon",
+    "name": "Amit & Sonal",
+    "rating": 4,
+    "comment": "Radhanagar Beach at sunset was pure magic. Great hotel selections and smooth transfers throughout our Andaman trip.",
+    "status": "approved",
+    "createdAt": "2026-07-21T10:59:43.625Z"
+  }
+]

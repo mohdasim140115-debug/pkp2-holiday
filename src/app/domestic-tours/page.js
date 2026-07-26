@@ -1,10 +1,18 @@
 import CategoryPageTemplate from "@/components/packages/CategoryPageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Domestic Tour Packages — Explore Incredible India",
-  description: "Discover PKP Holidays' handpicked domestic tour packages across India — Kashmir, Kerala, Goa, Rajasthan, Andaman, Ladakh and more.",
-  alternates: { canonical: "/domestic-tours" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/domestic-tours", {
+    title: "Domestic Tour Packages — Explore Incredible India",
+    description: "Discover PKP Holidays' handpicked domestic tour packages across India — Kashmir, Kerala, Goa, Rajasthan, Andaman, Ladakh and more.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/domestic-tours" },
+  };
+}
 
 export default function DomesticToursPage() {
   return (

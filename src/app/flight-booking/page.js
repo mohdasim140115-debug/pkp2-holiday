@@ -1,11 +1,19 @@
 import { Plane, TicketCheck, Wallet, Headset, MessageSquareText, Search, CalendarCheck, ThumbsUp } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Flight Booking — Domestic & International Flights",
-  description: "Book domestic and international flights with PKP Holidays at the best fares. Hassle-free ticketing with dedicated travel support.",
-  alternates: { canonical: "/flight-booking" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/flight-booking", {
+    title: "Flight Booking — Domestic & International Flights",
+    description: "Book domestic and international flights with PKP Holidays at the best fares. Hassle-free ticketing with dedicated travel support.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/flight-booking" },
+  };
+}
 
 const features = [
   { title: "Domestic & International", desc: "Flights to every major destination, in India and abroad.", icon: Plane },

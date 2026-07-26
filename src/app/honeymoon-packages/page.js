@@ -1,10 +1,18 @@
 import CategoryPageTemplate from "@/components/packages/CategoryPageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Honeymoon Packages — Romantic Getaways for Two",
-  description: "Celebrate your love with PKP Holidays' romantic honeymoon packages — Kashmir, Maldives, Bali, Andaman, Switzerland and more.",
-  alternates: { canonical: "/honeymoon-packages" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/honeymoon-packages", {
+    title: "Honeymoon Packages — Romantic Getaways for Two",
+    description: "Celebrate your love with PKP Holidays' romantic honeymoon packages — Kashmir, Maldives, Bali, Andaman, Switzerland and more.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/honeymoon-packages" },
+  };
+}
 
 export default function HoneymoonPackagesPage() {
   return (

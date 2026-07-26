@@ -1,4 +1,5 @@
 import { travelImage, avatarImage } from "@/lib/images";
+import galleryItems from "../../../data/gallery.json";
 
 export const testimonials = [
   { name: "Ankit & Riya Sharma", location: "Mumbai", trip: "Kashmir Honeymoon", rating: 5, avatar: avatarImage("t1"), text: "PKP Holidays planned the most magical honeymoon for us in Kashmir. The houseboat stay and Gulmarg gondola ride were unforgettable. Every detail was handled perfectly!" },
@@ -47,18 +48,9 @@ export const howWeWork = [
   { step: "04", title: "Travel & Create Memories", desc: "Relax while we handle everything — travel, stay and support.", icon: "Luggage" },
 ];
 
-const GALLERY_TAGS = [
-  "kashmir,houseboat", "goa,beach", "kerala,backwaters", "rajasthan,palace",
-  "andaman,island", "manali,mountains", "bali,temple", "dubai,skyline",
-  "ladakh,lake", "switzerland,alps", "maldives,resort", "darjeeling,tea",
-  "udaipur,lake", "sikkim,himalaya", "coorg,coffee", "thailand,islands",
-  "varanasi,ganges", "meghalaya,waterfall", "singapore,marina", "turkey,cappadocia",
-  "munnar,hills", "jaipur,fort", "vietnam,halongbay", "spiti,valley",
-];
-
-export const galleryImages = GALLERY_TAGS.map((tag, i) => ({
-  src: travelImage(tag.split(","), 800, i % 3 === 0 ? 1000 : 650, `gallery-${i}`),
-  alt: `PKP Holidays travel gallery photo ${i + 1}`,
+export const galleryImages = galleryItems.map((item, i) => ({
+  src: travelImage(item.tags.split(","), 800, i % 3 === 0 ? 1000 : 650, item.id),
+  alt: item.caption ? `${item.caption} — PKP Holidays travel gallery` : `PKP Holidays travel gallery photo ${i + 1}`,
 }));
 
 const INSTA_TAGS = ["kashmir", "goa,beach", "bali", "kerala,houseboat", "dubai", "rajasthan", "maldives", "manali"];

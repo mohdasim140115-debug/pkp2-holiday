@@ -9,10 +9,34 @@ const inputClass =
 
 export default function BookingForm({ destination = "", variant = "light", title = "Plan Your Trip", subtitle = "Fill in your details and our travel expert will get back to you within 24 hours." }) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
+    setError("");
+    setSubmitting(true);
+
+    const form = new FormData(e.target);
+    const payload = Object.fromEntries(form.entries());
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data.error || "Something went wrong. Please try again.");
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -35,6 +59,9 @@ export default function BookingForm({ destination = "", variant = "light", title
           <h3 className={`font-display text-2xl font-bold ${variant === "light" ? "text-navy" : "text-white"}`}>{title}</h3>
           {subtitle && <p className={`text-sm mt-2 ${variant === "light" ? "text-navy/60" : "text-white/70"}`}>{subtitle}</p>}
         </div>
+      )}
+      {error && (
+        <p className="mb-4 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">{error}</p>
       )}
       <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="relative">
@@ -88,9 +115,10 @@ export default function BookingForm({ destination = "", variant = "light", title
         <motion.button
           whileTap={{ scale: 0.97 }}
           type="submit"
-          className="sm:col-span-2 mt-1 inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy-dark text-white font-semibold rounded-xl py-3.5 transition-colors shadow-lg shadow-navy/25"
+          disabled={submitting}
+          className="sm:col-span-2 mt-1 inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy-dark text-white font-semibold rounded-xl py-3.5 transition-colors shadow-lg shadow-navy/25 disabled:opacity-60"
         >
-          <Send className="w-4 h-4" /> Send Enquiry
+          <Send className="w-4 h-4" /> {submitting ? "Sending..." : "Send Enquiry"}
         </motion.button>
       </form>
     </div>

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "honeymoon",
+    "label": "Honeymoon"
+  },
+  {
+    "id": "family",
+    "label": "Family"
+  },
+  {
+    "id": "adventure",
+    "label": "Adventure"
+  },
+  {
+    "id": "religious",
+    "label": "Religious"
+  },
+  {
+    "id": "weekend",
+    "label": "Weekend Getaway"
+  },
+  {
+    "id": "group",
+    "label": "Group"
+  },
+  {
+    "id": "corporate",
+    "label": "Corporate"
+  },
+  {
+    "id": "luxury",
+    "label": "Luxury"
+  },
+  {
+    "id": "beach",
+    "label": "Beach"
+  },
+  {
+    "id": "hill-station",
+    "label": "Hill Station"
+  },
+  {
+    "id": "wildlife",
+    "label": "Wildlife"
+  }
+]

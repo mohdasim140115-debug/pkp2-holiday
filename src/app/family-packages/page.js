@@ -1,10 +1,18 @@
 import CategoryPageTemplate from "@/components/packages/CategoryPageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Family Packages — Memories for the Whole Family",
-  description: "PKP Holidays' family tour packages are designed for every generation — comfortable stays, fun activities and hassle-free planning.",
-  alternates: { canonical: "/family-packages" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/family-packages", {
+    title: "Family Packages — Memories for the Whole Family",
+    description: "PKP Holidays' family tour packages are designed for every generation — comfortable stays, fun activities and hassle-free planning.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/family-packages" },
+  };
+}
 
 export default function FamilyPackagesPage() {
   return (

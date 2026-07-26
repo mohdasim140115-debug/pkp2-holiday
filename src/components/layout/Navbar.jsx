@@ -37,12 +37,12 @@ export default function Navbar() {
     <header
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "py-1.5 bg-navy luxury-shadow" : "py-4 bg-transparent"
+        scrolled ? "py-3 bg-navy luxury-shadow" : "py-4 bg-transparent"
       )}
     >
       <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between gap-3">
-          <Logo variant="dark" showTagline={!scrolled} size={scrolled ? 36 : 42} />
+          <Logo variant="dark" showTagline={!scrolled} size={scrolled ? 40 : 42} />
 
           <nav className="hidden lg:flex items-center gap-1" onMouseLeave={() => setMegaOpen(null)}>
             {mainNav.map((item) => (

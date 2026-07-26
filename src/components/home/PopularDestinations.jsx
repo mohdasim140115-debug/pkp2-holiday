@@ -81,14 +81,14 @@ export default function PopularDestinations() {
                 >
                   <Image
                     src={pkg.heroImage}
-                    alt={`${pkg.name} destination`}
+                    alt={`${pkg.destinationName} destination`}
                     fill
                     sizes="(max-width: 768px) 70vw, 280px"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-navy-dark/90 via-navy-dark/10 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="text-white font-display font-bold text-base sm:text-lg">{pkg.name}</p>
+                    <p className="text-white font-display font-bold text-base sm:text-lg">{pkg.destinationName}</p>
                     <p className="text-white/70 text-xs">{pkg.state || pkg.country}</p>
                   </div>
                 </Link>

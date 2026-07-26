@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 import clsx from "clsx";
 
-export default function FaqAccordion({ faqs, defaultOpen = 0 }) {
+export default function FaqAccordion({ faqs, defaultOpen = 0, compact = false }) {
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="space-y-3.5">
+    <div className={compact ? "space-y-2.5" : "space-y-3.5"}>
       {faqs.map((faq, i) => {
         const isOpen = open === i;
         return (
@@ -22,12 +22,16 @@ export default function FaqAccordion({ faqs, defaultOpen = 0 }) {
             {isOpen && <span className="absolute left-0 top-0 bottom-0 w-1 bg-sky" />}
             <button
               onClick={() => setOpen(isOpen ? -1 : i)}
-              className="w-full flex items-center gap-4 sm:gap-5 text-left px-5 sm:px-7 py-5"
+              className={clsx(
+                "w-full flex items-center gap-4 sm:gap-5 text-left px-5 sm:px-7",
+                compact ? "py-3.5" : "py-5"
+              )}
               aria-expanded={isOpen}
             >
               <span
                 className={clsx(
-                  "hidden sm:flex shrink-0 items-center justify-center w-9 h-9 rounded-full text-xs font-bold font-display transition-colors",
+                  "hidden sm:flex shrink-0 items-center justify-center rounded-full text-xs font-bold font-display transition-colors",
+                  compact ? "w-7 h-7" : "w-9 h-9",
                   isOpen ? "bg-sky/20 text-sky" : "bg-offwhite text-navy/40"
                 )}
               >
@@ -38,7 +42,8 @@ export default function FaqAccordion({ faqs, defaultOpen = 0 }) {
               </span>
               <span
                 className={clsx(
-                  "shrink-0 flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300",
+                  "shrink-0 flex items-center justify-center rounded-full transition-all duration-300",
+                  compact ? "w-7 h-7" : "w-9 h-9",
                   isOpen ? "rotate-45 bg-sky text-white" : "bg-offwhite text-navy group-hover:bg-sky/10 group-hover:text-sky"
                 )}
               >
@@ -53,7 +58,7 @@ export default function FaqAccordion({ faqs, defaultOpen = 0 }) {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  <p className="px-5 sm:px-7 sm:pl-19 pb-6 text-sm sm:text-base text-white/70 leading-relaxed">{faq.a}</p>
+                  <p className={clsx("px-5 sm:px-7 sm:pl-19 text-sm sm:text-base text-white/70 leading-relaxed", compact ? "pb-4" : "pb-6")}>{faq.a}</p>
                 </motion.div>
               )}
             </AnimatePresence>

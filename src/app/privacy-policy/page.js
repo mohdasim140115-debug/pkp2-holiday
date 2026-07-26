@@ -1,11 +1,19 @@
 import LegalPageTemplate from "@/components/shared/LegalPageTemplate";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Privacy Policy",
-  description: "Read PKP Holidays' privacy policy to understand how we collect, use and protect your personal information.",
-  alternates: { canonical: "/privacy-policy" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/privacy-policy", {
+    title: "Privacy Policy",
+    description: "Read PKP Holidays' privacy policy to understand how we collect, use and protect your personal information.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/privacy-policy" },
+  };
+}
 
 const sections = [
   {

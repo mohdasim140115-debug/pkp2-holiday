@@ -8,12 +8,20 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ContactCta from "@/components/home/ContactCta";
 import FadeIn from "@/components/ui/FadeIn";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "About Us",
-  description: "Learn about PKP Holidays — a premium travel agency crafting customized domestic & international tour packages, honeymoon trips, group and corporate travel with passion and care.",
-  alternates: { canonical: "/about" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/about", {
+    title: "About Us",
+    description: "Learn about PKP Holidays — a premium travel agency crafting customized domestic & international tour packages, honeymoon trips, group and corporate travel with passion and care.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/about" },
+  };
+}
 
 const values = [
   { title: "Passion for Travel", desc: "Every itinerary is crafted with genuine passion for creating unforgettable experiences.", icon: HeartHandshake },

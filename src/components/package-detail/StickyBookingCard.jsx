@@ -11,12 +11,12 @@ export default function StickyBookingCard({ pkg }) {
 
   return (
     <>
-      <div className="bg-white rounded-3xl luxury-shadow p-6 sticky top-28">
+      <div className="bg-white rounded-3xl ring-1 ring-navy/8 luxury-shadow-lg p-6 sm:p-7 sticky top-28">
         <div className="flex items-end justify-between mb-1">
           <div>
-            <span className="text-xs text-navy/50">Starting from</span>
-            <div className="flex items-baseline gap-2">
-              <span className="font-display text-3xl font-bold text-navy">₹{pkg.price.toLocaleString("en-IN")}</span>
+            <span className="text-xs font-medium text-navy/50">Starting from</span>
+            <div className="flex items-baseline gap-2 mt-0.5">
+              <span className="font-display text-4xl font-bold text-navy">₹{pkg.price.toLocaleString("en-IN")}</span>
               <span className="text-sm text-navy/40 line-through">₹{pkg.originalPrice.toLocaleString("en-IN")}</span>
             </div>
             <span className="text-xs text-navy/50">per person</span>

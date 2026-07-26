@@ -34,6 +34,7 @@ export const mainNav = [
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "Gallery", href: "/gallery" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 

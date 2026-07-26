@@ -1,11 +1,19 @@
 import LegalPageTemplate from "@/components/shared/LegalPageTemplate";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Refund Policy",
-  description: "Learn about PKP Holidays' refund policy, processing timelines and eligibility for tour, hotel and flight bookings.",
-  alternates: { canonical: "/refund-policy" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/refund-policy", {
+    title: "Refund Policy",
+    description: "Learn about PKP Holidays' refund policy, processing timelines and eligibility for tour, hotel and flight bookings.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/refund-policy" },
+  };
+}
 
 const sections = [
   {

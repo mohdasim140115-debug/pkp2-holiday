@@ -1,11 +1,19 @@
 import LegalPageTemplate from "@/components/shared/LegalPageTemplate";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Cancellation Policy",
-  description: "Understand PKP Holidays' cancellation policy, including timelines and charges applicable to tour, hotel and flight bookings.",
-  alternates: { canonical: "/cancellation-policy" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/cancellation-policy", {
+    title: "Cancellation Policy",
+    description: "Understand PKP Holidays' cancellation policy, including timelines and charges applicable to tour, hotel and flight bookings.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/cancellation-policy" },
+  };
+}
 
 const sections = [
   {

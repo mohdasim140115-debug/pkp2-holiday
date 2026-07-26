@@ -9,11 +9,13 @@ export default function SectionHeading({
   align = "center",
   light = false,
   className = "mb-10 sm:mb-14",
+  maxWidth = "max-w-2xl",
+  nowrap = false,
 }) {
   return (
     <div
       className={clsx(
-        "max-w-2xl",
+        maxWidth,
         align === "center" ? "mx-auto text-center" : "text-left",
         className
       )}
@@ -40,7 +42,8 @@ export default function SectionHeading({
         transition={{ duration: 0.55, delay: 0.05 }}
         className={clsx(
           "font-sans font-extrabold text-2xl sm:text-3xl lg:text-[2.25rem] leading-tight tracking-tight",
-          light ? "text-white" : "text-navy"
+          light ? "text-white" : "text-navy",
+          nowrap && "sm:whitespace-nowrap"
         )}
       >
         {title}

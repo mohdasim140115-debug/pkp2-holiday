@@ -1,20 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+
+const PAGE_SIZE = 15;
 
 export default function DestinationsTable({ destinations }) {
   const router = useRouter();
   const [deletingId, setDeletingId] = useState(null);
   const [query, setQuery] = useState("");
+  const [page, setPage] = useState(1);
 
   const filtered = destinations.filter((d) =>
     `${d.name} ${d.country} ${d.state || ""}`.toLowerCase().includes(query.toLowerCase())
   );
 
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+  useEffect(() => {
+    setPage(1);
+  }, [query]);
+
+  useEffect(() => {
+    if (page > totalPages) setPage(totalPages);
+  }, [page, totalPages]);
+
+  const paginated = useMemo(
+    () => filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
+    [filtered, page]
+  );
+
   async function handleDelete(id, name) {
-    if (!confirm(`Delete "${name}"? This cannot be undone.`)) return;
+    if (!confirm(`Delete "${name}"? This will also delete all of its packages. This cannot be undone.`)) return;
     setDeletingId(id);
     try {
       const res = await fetch(`/api/admin/destinations/${id}`, { method: "DELETE" });
@@ -40,31 +58,30 @@ export default function DestinationsTable({ destinations }) {
         />
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-auto max-h-[65vh]">
         <table className="w-full text-sm">
-          <thead>
+          <thead className="sticky top-0 bg-white z-10">
             <tr className="text-left text-neutral-500 border-b border-neutral-200">
               <th className="px-4 py-3 font-medium">Name</th>
               <th className="px-4 py-3 font-medium">Type</th>
-              <th className="px-4 py-3 font-medium">Duration</th>
-              <th className="px-4 py-3 font-medium">Price</th>
-              <th className="px-4 py-3 font-medium">Rating</th>
+              <th className="px-4 py-3 font-medium">Packages</th>
               <th className="px-4 py-3 font-medium text-right">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {filtered.map((d) => (
+            {paginated.map((d) => (
               <tr key={d.id} className="border-b border-neutral-100 last:border-0 hover:bg-offwhite/60">
                 <td className="px-4 py-3">
                   <p className="font-medium text-navy">{d.name}</p>
                   <p className="text-xs text-neutral-500">{d.state ? `${d.state}, ` : ""}{d.country}</p>
                 </td>
                 <td className="px-4 py-3 capitalize">{d.type}</td>
-                <td className="px-4 py-3">{d.nights}N / {d.days}D</td>
-                <td className="px-4 py-3">₹{Number(d.price).toLocaleString("en-IN")}</td>
-                <td className="px-4 py-3">{d.rating}</td>
+                <td className="px-4 py-3">{d.packageCount}</td>
                 <td className="px-4 py-3">
                   <div className="flex items-center justify-end gap-3">
+                    <Link href={`/admin/packages?destinationId=${d.id}`} className="text-blue hover:text-navy font-medium">
+                      Packages
+                    </Link>
                     <Link href={`/admin/destinations/${d.id}/edit`} className="text-blue hover:text-navy font-medium">
                       Edit
                     </Link>
@@ -81,7 +98,7 @@ export default function DestinationsTable({ destinations }) {
             ))}
             {filtered.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-4 py-8 text-center text-neutral-400">
+                <td colSpan={4} className="px-4 py-8 text-center text-neutral-400">
                   No destinations found.
                 </td>
               </tr>
@@ -89,6 +106,35 @@ export default function DestinationsTable({ destinations }) {
           </tbody>
         </table>
       </div>
+
+      {filtered.length > 0 && (
+        <div className="flex items-center justify-between gap-4 px-4 py-3 border-t border-neutral-200 text-sm">
+          <p className="text-neutral-500">
+            Showing {(page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
+          </p>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              className="rounded-lg border border-neutral-300 px-3 py-1.5 font-medium hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              Previous
+            </button>
+            <span className="text-neutral-500">
+              Page {page} of {totalPages}
+            </span>
+            <button
+              type="button"
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              className="rounded-lg border border-neutral-300 px-3 py-1.5 font-medium hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

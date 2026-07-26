@@ -1,10 +1,18 @@
 import CategoryPageTemplate from "@/components/packages/CategoryPageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Adventure Tours — Thrilling Outdoor Experiences",
-  description: "Trekking, river rafting, paragliding and more — explore PKP Holidays' adventure tour packages across Ladakh, Manali, Rishikesh, Spiti and beyond.",
-  alternates: { canonical: "/adventure-tours" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/adventure-tours", {
+    title: "Adventure Tours — Thrilling Outdoor Experiences",
+    description: "Trekking, river rafting, paragliding and more — explore PKP Holidays' adventure tour packages across Ladakh, Manali, Rishikesh, Spiti and beyond.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/adventure-tours" },
+  };
+}
 
 export default function AdventureToursPage() {
   return (

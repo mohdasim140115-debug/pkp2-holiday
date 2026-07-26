@@ -5,12 +5,20 @@ import PageHero from "@/components/shared/PageHero";
 import Container from "@/components/ui/Container";
 import FadeIn from "@/components/ui/FadeIn";
 import { blogs } from "@/lib/data/blogs";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Travel Blog — Tips, Guides & Inspiration",
-  description: "Explore PKP Holidays' travel blog for tips on packing, visas, budget travel, honeymoon destinations, family vacations and adventure travel.",
-  alternates: { canonical: "/blog" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/blog", {
+    title: "Travel Blog — Tips, Guides & Inspiration",
+    description: "Explore PKP Holidays' travel blog for tips on packing, visas, budget travel, honeymoon destinations, family vacations and adventure travel.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/blog" },
+  };
+}
 
 export default function BlogPage() {
   return (

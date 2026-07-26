@@ -1,11 +1,19 @@
 import { Hotel, BedDouble, Wallet, ShieldCheck, MessageSquareText, Search, CalendarCheck, ThumbsUp } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Hotel Booking — Handpicked Stays Worldwide",
-  description: "Book handpicked hotels and resorts worldwide with PKP Holidays — from cozy boutique stays to 5-star luxury resorts, at the best available rates.",
-  alternates: { canonical: "/hotels" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/hotels", {
+    title: "Hotel Booking — Handpicked Stays Worldwide",
+    description: "Book handpicked hotels and resorts worldwide with PKP Holidays — from cozy boutique stays to 5-star luxury resorts, at the best available rates.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/hotels" },
+  };
+}
 
 const features = [
   { title: "Handpicked Properties", desc: "Every hotel is personally vetted for quality, location and service.", icon: Hotel },

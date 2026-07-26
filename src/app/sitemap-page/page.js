@@ -4,12 +4,20 @@ import Container from "@/components/ui/Container";
 import { packages } from "@/lib/data/packages";
 import { blogs } from "@/lib/data/blogs";
 import { packageMenu, servicesMenu, companyMenu, footerLinks } from "@/lib/data/nav";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Sitemap",
-  description: "Browse a full sitemap of all pages available on the PKP Holidays website.",
-  alternates: { canonical: "/sitemap-page" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/sitemap-page", {
+    title: "Sitemap",
+    description: "Browse a full sitemap of all pages available on the PKP Holidays website.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/sitemap-page" },
+  };
+}
 
 function LinkColumn({ title, links }) {
   return (
@@ -51,7 +59,7 @@ export default function SitemapPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2.5">
             {packages.map((p) => (
               <Link key={p.slug} href={`/packages/${p.slug}`} className="text-sm text-navy/65 hover:text-blue transition-colors">
-                {p.name} Tour Package
+                {p.name}
               </Link>
             ))}
           </div>

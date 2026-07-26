@@ -1,11 +1,19 @@
 import LegalPageTemplate from "@/components/shared/LegalPageTemplate";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Terms & Conditions",
-  description: "Read the terms and conditions governing the use of PKP Holidays' website and travel booking services.",
-  alternates: { canonical: "/terms-and-conditions" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/terms-and-conditions", {
+    title: "Terms & Conditions",
+    description: "Read the terms and conditions governing the use of PKP Holidays' website and travel booking services.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/terms-and-conditions" },
+  };
+}
 
 const sections = [
   {

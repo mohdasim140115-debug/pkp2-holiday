@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "kashmir",
+    "destinationId": "kashmir",
+    "name": "Kashmir Valley Honeymoon Escape",
+    "tag": "Paradise on Earth",
+    "categories": [
+      "honeymoon",
+      "family",
+      "hill-station",
+      "luxury"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 32999,
+    "rating": 4.9,
+    "img": "kashmir-valley-houseboat",
+    "best": "March to October",
+    "highlights": [
+      "Shikara ride on Dal Lake",
+      "Stay in a traditional houseboat",
+      "Gondola cable car in Gulmarg",
+      "Betaab Valley & Pahalgam meadows",
+      "Mughal Gardens of Srinagar"
+    ]
+  },
+  {
+    "id": "manali",
+    "destinationId": "manali",
+    "name": "Manali Snow Adventure Package",
+    "tag": "Snow Capped Bliss",
+    "categories": [
+      "honeymoon",
+      "adventure",
+      "hill-station",
+      "family"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 17999,
+    "rating": 4.7,
+    "img": "manali-mountains-snow",
+    "best": "October to June",
+    "highlights": [
+      "Rohtang Pass snow adventure",
+      "Solang Valley paragliding",
+      "Old Manali cafes walk",
+      "Hidimba Devi Temple",
+      "River rafting in Kullu"
+    ]
+  },
+  {
+    "id": "shimla",
+    "destinationId": "shimla",
+    "name": "Shimla Hill Retreat Package",
+    "tag": "Queen of Hills",
+    "categories": [
+      "family",
+      "hill-station",
+      "honeymoon"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 14999,
+    "rating": 4.6,
+    "img": "shimla-mall-road",
+    "best": "March to June, Dec to Feb",
+    "highlights": [
+      "Mall Road & Ridge walk",
+      "Kufri snow point",
+      "Toy train ride",
+      "Jakhoo Temple",
+      "Christ Church heritage tour"
+    ]
+  },
+  {
+    "id": "goa",
+    "destinationId": "goa",
+    "name": "Goa Beach Holiday Package",
+    "tag": "Sun, Sand & Sea",
+    "categories": [
+      "honeymoon",
+      "adventure",
+      "beach",
+      "weekend"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 15999,
+    "rating": 4.8,
+    "img": "goa-beach-sunset",
+    "best": "November to February",
+    "highlights": [
+      "North & South Goa beaches",
+      "Sunset cruise on Mandovi",
+      "Water sports at Baga",
+      "Old Goa churches heritage walk",
+      "Beach shacks & nightlife"
+    ]
+  },
+  {
+    "id": "kerala",
+    "destinationId": "kerala",
+    "name": "Kerala Backwaters Honeymoon Tour",
+    "tag": "God's Own Country",
+    "categories": [
+      "honeymoon",
+      "family",
+      "luxury",
+      "wildlife"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 26999,
+    "rating": 4.9,
+    "img": "kerala-backwaters-houseboat",
+    "best": "September to March",
+    "highlights": [
+      "Overnight Alleppey houseboat stay",
+      "Munnar tea gardens",
+      "Periyar wildlife sanctuary",
+      "Kathakali dance show",
+      "Ayurvedic spa experience"
+    ]
+  },
+  {
+    "id": "andaman",
+    "destinationId": "andaman",
+    "name": "Andaman Island Beach Getaway",
+    "tag": "Island Paradise",
+    "categories": [
+      "honeymoon",
+      "adventure",
+      "beach",
+      "luxury"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 28999,
+    "rating": 4.8,
+    "img": "andaman-radhanagar-beach",
+    "best": "October to May",
+    "highlights": [
+      "Radhanagar Beach sunset",
+      "Scuba diving at Havelock",
+      "Cellular Jail light & sound show",
+      "Ross & North Bay Island",
+      "Glass-bottom boat ride"
+    ]
+  },
+  {
+    "id": "leh-ladakh",
+    "destinationId": "leh-ladakh",
+    "name": "Leh Ladakh Adventure Expedition",
+    "tag": "Land of High Passes",
+    "categories": [
+      "adventure",
+      "group"
+    ],
+    "days": 7,
+    "nights": 6,
+    "price": 34999,
+    "rating": 4.9,
+    "img": "ladakh-pangong-lake",
+    "best": "May to September",
+    "highlights": [
+      "Pangong Tso lake camping",
+      "Khardung La highest motorable pass",
+      "Nubra Valley sand dunes",
+      "Magnetic Hill",
+      "Leh Palace & monasteries"
+    ]
+  },
+  {
+    "id": "rajasthan",
+    "destinationId": "rajasthan",
+    "name": "Rajasthan Royal Heritage Tour",
+    "tag": "Land of Kings",
+    "categories": [
+      "family",
+      "luxury",
+      "group",
+      "religious"
+    ],
+    "days": 8,
+    "nights": 7,
+    "price": 39999,
+    "rating": 4.8,
+    "img": "rajasthan-udaipur-palace",
+    "best": "October to March",
+    "highlights": [
+      "Jaipur City Palace & Amber Fort",
+      "Udaipur Lake Palace boat ride",
+      "Jaisalmer desert safari & camping",
+      "Jodhpur Mehrangarh Fort",
+      "Pushkar Brahma Temple"
+    ]
+  },
+  {
+    "id": "udaipur",
+    "destinationId": "udaipur",
+    "name": "Udaipur Lake City Honeymoon Package",
+    "tag": "City of Lakes",
+    "categories": [
+      "honeymoon",
+      "luxury",
+      "family"
+    ],
+    "days": 3,
+    "nights": 2,
+    "price": 13999,
+    "rating": 4.8,
+    "img": "udaipur-lake-palace",
+    "best": "September to March",
+    "highlights": [
+      "Lake Pichola sunset cruise",
+      "City Palace heritage tour",
+      "Saheliyon Ki Bari gardens",
+      "Jag Mandir island palace",
+      "Rooftop candle-light dinner"
+    ]
+  },
+  {
+    "id": "jaipur",
+    "destinationId": "jaipur",
+    "name": "Jaipur Pink City Heritage Tour",
+    "tag": "The Pink City",
+    "categories": [
+      "family",
+      "luxury",
+      "group"
+    ],
+    "days": 3,
+    "nights": 2,
+    "price": 12999,
+    "rating": 4.7,
+    "img": "jaipur-hawa-mahal",
+    "best": "October to March",
+    "highlights": [
+      "Amber Fort elephant/jeep ride",
+      "Hawa Mahal photo stop",
+      "City Palace & Jantar Mantar",
+      "Chokhi Dhani cultural evening",
+      "Local bazaar shopping"
+    ]
+  },
+  {
+    "id": "ooty",
+    "destinationId": "ooty",
+    "name": "Ooty Hill Station Family Package",
+    "tag": "Queen of Hill Stations",
+    "categories": [
+      "family",
+      "hill-station",
+      "honeymoon"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 15999,
+    "rating": 4.6,
+    "img": "ooty-tea-gardens",
+    "best": "October to June",
+    "highlights": [
+      "Nilgiri toy train ride",
+      "Botanical Gardens",
+      "Doddabetta Peak viewpoint",
+      "Tea museum & tasting",
+      "Ooty Lake boating"
+    ]
+  },
+  {
+    "id": "coorg",
+    "destinationId": "coorg",
+    "name": "Coorg Coffee Hills Honeymoon Package",
+    "tag": "Scotland of India",
+    "categories": [
+      "honeymoon",
+      "hill-station",
+      "family"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 16999,
+    "rating": 4.7,
+    "img": "coorg-coffee-plantation",
+    "best": "October to March",
+    "highlights": [
+      "Coffee plantation walk",
+      "Abbey Falls",
+      "Raja's Seat sunset point",
+      "Dubare elephant camp",
+      "Namdroling Golden Temple"
+    ]
+  },
+  {
+    "id": "darjeeling",
+    "destinationId": "darjeeling",
+    "name": "Darjeeling Tea Hills Getaway",
+    "tag": "Queen of the Hills",
+    "categories": [
+      "family",
+      "hill-station",
+      "honeymoon"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 16999,
+    "rating": 4.7,
+    "img": "darjeeling-tea-hills",
+    "best": "March to May, Oct to Dec",
+    "highlights": [
+      "Tiger Hill sunrise over Kanchenjunga",
+      "Darjeeling Himalayan Toy Train",
+      "Tea garden tour & tasting",
+      "Peace Pagoda",
+      "Batasia Loop"
+    ]
+  },
+  {
+    "id": "sikkim",
+    "destinationId": "sikkim",
+    "name": "Sikkim Himalayan Adventure Tour",
+    "tag": "Himalayan Wonderland",
+    "categories": [
+      "adventure",
+      "hill-station",
+      "honeymoon"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 27999,
+    "rating": 4.8,
+    "img": "sikkim-gangtok-mountains",
+    "best": "March to June, Oct to Dec",
+    "highlights": [
+      "Tsomgo Lake & Nathula Pass",
+      "Gangtok ropeway",
+      "Yumthang Valley of Flowers",
+      "Rumtek Monastery",
+      "MG Marg evening stroll"
+    ]
+  },
+  {
+    "id": "meghalaya",
+    "destinationId": "meghalaya",
+    "name": "Meghalaya Living Root Bridges Tour",
+    "tag": "Abode of Clouds",
+    "categories": [
+      "adventure",
+      "family",
+      "hill-station"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 21999,
+    "rating": 4.7,
+    "img": "meghalaya-living-root-bridge",
+    "best": "September to May",
+    "highlights": [
+      "Living Root Bridges of Cherrapunji",
+      "Dawki crystal-clear river",
+      "Mawsmai limestone caves",
+      "Shillong Peak viewpoint",
+      "Umiam Lake"
+    ]
+  },
+  {
+    "id": "rishikesh",
+    "destinationId": "rishikesh",
+    "name": "Rishikesh Yoga & Rafting Getaway",
+    "tag": "Yoga Capital of the World",
+    "categories": [
+      "adventure",
+      "religious",
+      "weekend"
+    ],
+    "days": 3,
+    "nights": 2,
+    "price": 9999,
+    "rating": 4.6,
+    "img": "rishikesh-ganga-aarti",
+    "best": "September to April",
+    "highlights": [
+      "Ganga Aarti at Triveni Ghat",
+      "River rafting on the Ganges",
+      "Laxman Jhula & Ram Jhula walk",
+      "Bungee jumping at Jumpin Heights",
+      "Yoga & meditation session"
+    ]
+  },
+  {
+    "id": "varanasi",
+    "destinationId": "varanasi",
+    "name": "Varanasi Spiritual Heritage Tour",
+    "tag": "Spiritual Capital of India",
+    "categories": [
+      "religious",
+      "family"
+    ],
+    "days": 3,
+    "nights": 2,
+    "price": 10999,
+    "rating": 4.7,
+    "img": "varanasi-ganga-ghats",
+    "best": "October to March",
+    "highlights": [
+      "Evening Ganga Aarti at Dashashwamedh Ghat",
+      "Sunrise boat ride on the Ganges",
+      "Kashi Vishwanath Temple darshan",
+      "Sarnath Buddhist heritage site",
+      "Old city lanes food walk"
+    ]
+  },
+  {
+    "id": "amritsar",
+    "destinationId": "amritsar",
+    "name": "Amritsar Golden Temple Pilgrimage",
+    "tag": "The Golden City",
+    "categories": [
+      "religious",
+      "family",
+      "weekend"
+    ],
+    "days": 2,
+    "nights": 1,
+    "price": 8999,
+    "rating": 4.8,
+    "img": "amritsar-golden-temple",
+    "best": "October to March",
+    "highlights": [
+      "Golden Temple darshan & langar",
+      "Wagah Border retreat ceremony",
+      "Jallianwala Bagh memorial",
+      "Partition Museum",
+      "Amritsari kulcha food trail"
+    ]
+  },
+  {
+    "id": "tirupati",
+    "destinationId": "tirupati",
+    "name": "Tirupati Temple Darshan Tour",
+    "tag": "Abode of Lord Venkateswara",
+    "categories": [
+      "religious",
+      "family"
+    ],
+    "days": 2,
+    "nights": 1,
+    "price": 8499,
+    "rating": 4.7,
+    "img": "tirupati-temple-hills",
+    "best": "September to February",
+    "highlights": [
+      "Tirumala Venkateswara Temple darshan",
+      "Sri Padmavathi Temple",
+      "Akasa Ganga waterfall",
+      "Silathoranam natural rock arch",
+      "Temple town heritage walk"
+    ]
+  },
+  {
+    "id": "shirdi",
+    "destinationId": "shirdi",
+    "name": "Shirdi Sai Baba Pilgrimage Tour",
+    "tag": "Home of Sai Baba",
+    "categories": [
+      "religious",
+      "family",
+      "weekend"
+    ],
+    "days": 2,
+    "nights": 1,
+    "price": 7999,
+    "rating": 4.7,
+    "img": "shirdi-sai-temple",
+    "best": "Year Round",
+    "highlights": [
+      "Sai Baba Samadhi Mandir darshan",
+      "Dwarkamai Mosque",
+      "Chavadi & Lendi Baug garden",
+      "Shani Shingnapur day trip",
+      "Local prasad & shopping"
+    ]
+  },
+  {
+    "id": "munnar",
+    "destinationId": "munnar",
+    "name": "Munnar Tea Gardens Honeymoon Package",
+    "tag": "Kashmir of South India",
+    "categories": [
+      "honeymoon",
+      "hill-station",
+      "family"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 17999,
+    "rating": 4.8,
+    "img": "munnar-tea-hills-mist",
+    "best": "September to May",
+    "highlights": [
+      "Rolling tea plantations tour",
+      "Eravikulam National Park",
+      "Mattupetty Dam & lake",
+      "Top Station viewpoint",
+      "Spice plantation walk"
+    ]
+  },
+  {
+    "id": "wayanad",
+    "destinationId": "wayanad",
+    "name": "Wayanad Wildlife & Nature Tour",
+    "tag": "Green Paradise of Kerala",
+    "categories": [
+      "adventure",
+      "wildlife",
+      "family"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 16999,
+    "rating": 4.6,
+    "img": "wayanad-green-hills",
+    "best": "October to May",
+    "highlights": [
+      "Edakkal Caves trek",
+      "Wayanad Wildlife Sanctuary safari",
+      "Chembra Peak heart lake trek",
+      "Soochipara Waterfalls",
+      "Banasura Sagar Dam"
+    ]
+  },
+  {
+    "id": "jim-corbett",
+    "destinationId": "jim-corbett",
+    "name": "Jim Corbett Tiger Safari Package",
+    "tag": "India's Oldest National Park",
+    "categories": [
+      "wildlife",
+      "family",
+      "weekend"
+    ],
+    "days": 3,
+    "nights": 2,
+    "price": 13999,
+    "rating": 4.6,
+    "img": "jim-corbett-tiger-safari",
+    "best": "November to June",
+    "highlights": [
+      "Jeep safari in Dhikala zone",
+      "Corbett Waterfall",
+      "Riverside camping",
+      "Bird watching tour",
+      "Kosi River bank walk"
+    ]
+  },
+  {
+    "id": "ranthambore",
+    "destinationId": "ranthambore",
+    "name": "Ranthambore Tiger Reserve Safari",
+    "tag": "Land of the Tiger",
+    "categories": [
+      "wildlife",
+      "family"
+    ],
+    "days": 3,
+    "nights": 2,
+    "price": 14999,
+    "rating": 4.6,
+    "img": "ranthambore-tiger-reserve",
+    "best": "October to June",
+    "highlights": [
+      "Tiger safari in core zone",
+      "Ranthambore Fort visit",
+      "Padam Talao lake",
+      "Nature walk & bird watching",
+      "Local Rajasthani cuisine"
+    ]
+  },
+  {
+    "id": "lakshadweep",
+    "destinationId": "lakshadweep",
+    "name": "Lakshadweep Coral Lagoon Honeymoon",
+    "tag": "India's Coral Paradise",
+    "categories": [
+      "honeymoon",
+      "adventure",
+      "beach",
+      "luxury"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 33999,
+    "rating": 4.9,
+    "img": "lakshadweep-lagoon",
+    "best": "October to May",
+    "highlights": [
+      "Agatti lagoon snorkelling",
+      "Kavaratti coral reef diving",
+      "Bangaram Island beach day",
+      "Glass-bottom boat cruise",
+      "Water villa stay"
+    ]
+  },
+  {
+    "id": "spiti-valley",
+    "destinationId": "spiti-valley",
+    "name": "Spiti Valley Himalayan Expedition",
+    "tag": "Middle Land of the Himalayas",
+    "categories": [
+      "adventure",
+      "group"
+    ],
+    "days": 7,
+    "nights": 6,
+    "price": 29999,
+    "rating": 4.8,
+    "img": "spiti-valley-monastery",
+    "best": "May to October",
+    "highlights": [
+      "Key Monastery visit",
+      "Chandratal Lake camping",
+      "Kaza local sightseeing",
+      "Hikkim highest post office",
+      "Pin Valley National Park"
+    ]
+  },
+  {
+    "id": "bali",
+    "destinationId": "bali",
+    "name": "Bali Island Honeymoon Package",
+    "tag": "Island of the Gods",
+    "categories": [
+      "honeymoon",
+      "luxury",
+      "beach",
+      "adventure"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 62999,
+    "rating": 4.9,
+    "img": "bali-rice-terrace-temple",
+    "best": "April to October",
+    "highlights": [
+      "Tegallalang rice terrace tour",
+      "Uluwatu Temple sunset & Kecak dance",
+      "Nusa Penida island hopping",
+      "Ubud Monkey Forest",
+      "Private villa with pool stay"
+    ]
+  },
+  {
+    "id": "dubai",
+    "destinationId": "dubai",
+    "name": "Dubai City & Desert Tour",
+    "tag": "City of Gold",
+    "categories": [
+      "luxury",
+      "family",
+      "honeymoon",
+      "group"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 54999,
+    "rating": 4.9,
+    "img": "dubai-burj-khalifa-skyline",
+    "best": "November to March",
+    "highlights": [
+      "Burj Khalifa 'At the Top' entry",
+      "Desert safari with BBQ dinner",
+      "Dubai Marina dhow cruise",
+      "Miracle Garden visit",
+      "Global Village shopping"
+    ]
+  },
+  {
+    "id": "thailand",
+    "destinationId": "thailand",
+    "name": "Thailand Island Hopping Package",
+    "tag": "Land of Smiles",
+    "categories": [
+      "honeymoon",
+      "adventure",
+      "beach",
+      "group"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 44999,
+    "rating": 4.8,
+    "img": "thailand-phi-phi-islands",
+    "best": "November to March",
+    "highlights": [
+      "Phi Phi Island speedboat tour",
+      "Phuket old town & beaches",
+      "Bangkok Grand Palace visit",
+      "James Bond Island cruise",
+      "Floating market experience"
+    ]
+  },
+  {
+    "id": "singapore",
+    "destinationId": "singapore",
+    "name": "Singapore City Explorer Package",
+    "tag": "The Lion City",
+    "categories": [
+      "family",
+      "luxury",
+      "honeymoon"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 58999,
+    "rating": 4.8,
+    "img": "singapore-marina-bay-sands",
+    "best": "Year Round",
+    "highlights": [
+      "Gardens by the Bay light show",
+      "Universal Studios Singapore",
+      "Sentosa island & cable car",
+      "Marina Bay Sands SkyPark",
+      "Night Safari at zoo"
+    ]
+  },
+  {
+    "id": "malaysia",
+    "destinationId": "malaysia",
+    "name": "Malaysia Twin Towers Family Tour",
+    "tag": "Truly Asia",
+    "categories": [
+      "family",
+      "honeymoon",
+      "group"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 47999,
+    "rating": 4.7,
+    "img": "malaysia-petronas-towers",
+    "best": "December to February",
+    "highlights": [
+      "Petronas Twin Towers visit",
+      "Genting Highlands cable car",
+      "Batu Caves temple",
+      "Langkawi Sky Bridge",
+      "Kuala Lumpur city tour"
+    ]
+  },
+  {
+    "id": "maldives",
+    "destinationId": "maldives",
+    "name": "Maldives Overwater Villa Honeymoon",
+    "tag": "Ultimate Island Romance",
+    "categories": [
+      "honeymoon",
+      "luxury"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 74999,
+    "rating": 5,
+    "img": "maldives-overwater-villa",
+    "best": "November to April",
+    "highlights": [
+      "Overwater villa private stay",
+      "Sunset dolphin cruise",
+      "Snorkelling in house reef",
+      "Private sandbank candlelight dinner",
+      "Underwater spa experience"
+    ]
+  },
+  {
+    "id": "vietnam",
+    "destinationId": "vietnam",
+    "name": "Vietnam Heritage & Bay Cruise Tour",
+    "tag": "Timeless Charm",
+    "categories": [
+      "adventure",
+      "group",
+      "honeymoon"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 46999,
+    "rating": 4.7,
+    "img": "vietnam-halong-bay",
+    "best": "October to April",
+    "highlights": [
+      "Halong Bay overnight cruise",
+      "Hanoi old quarter walk",
+      "Ho Chi Minh City tour",
+      "Cu Chi Tunnels visit",
+      "Hoi An lantern town"
+    ]
+  },
+  {
+    "id": "europe",
+    "destinationId": "europe",
+    "name": "Europe Grand Multi-Country Tour",
+    "tag": "Grand Multi-Country Tour",
+    "categories": [
+      "luxury",
+      "group",
+      "family"
+    ],
+    "days": 10,
+    "nights": 9,
+    "price": 149999,
+    "rating": 4.9,
+    "img": "europe-paris-eiffel-tower",
+    "best": "April to September",
+    "highlights": [
+      "Eiffel Tower & Seine cruise, Paris",
+      "Vatican & Colosseum, Rome",
+      "Swiss Alps scenic train ride",
+      "Venice gondola experience",
+      "Amsterdam canal cruise"
+    ]
+  },
+  {
+    "id": "switzerland",
+    "destinationId": "switzerland",
+    "name": "Switzerland Alps Honeymoon Package",
+    "tag": "Roof of Europe",
+    "categories": [
+      "honeymoon",
+      "luxury",
+      "adventure"
+    ],
+    "days": 7,
+    "nights": 6,
+    "price": 128999,
+    "rating": 4.9,
+    "img": "switzerland-alps-lake",
+    "best": "May to September",
+    "highlights": [
+      "Jungfraujoch 'Top of Europe' train",
+      "Lake Lucerne cruise",
+      "Interlaken adventure sports",
+      "Mount Titlis cable car",
+      "Zurich city tour"
+    ]
+  },
+  {
+    "id": "turkey",
+    "destinationId": "turkey",
+    "name": "Turkey Cappadocia Honeymoon Tour",
+    "tag": "Where Continents Meet",
+    "categories": [
+      "honeymoon",
+      "family",
+      "luxury"
+    ],
+    "days": 7,
+    "nights": 6,
+    "price": 79999,
+    "rating": 4.8,
+    "img": "turkey-cappadocia-balloons",
+    "best": "April to June, Sept to Nov",
+    "highlights": [
+      "Cappadocia hot air balloon ride",
+      "Istanbul Blue Mosque & Hagia Sophia",
+      "Bosphorus dinner cruise",
+      "Pamukkale thermal terraces",
+      "Grand Bazaar shopping"
+    ]
+  },
+  {
+    "id": "mauritius",
+    "destinationId": "mauritius",
+    "name": "Mauritius Beach Honeymoon Package",
+    "tag": "Paradise Island",
+    "categories": [
+      "honeymoon",
+      "luxury",
+      "beach"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 84999,
+    "rating": 4.9,
+    "img": "mauritius-beach-resort",
+    "best": "May to December",
+    "highlights": [
+      "Catamaran cruise to Ile aux Cerfs",
+      "Chamarel seven coloured earth",
+      "Black River Gorges viewpoint",
+      "Underwater sea walk",
+      "Beachfront resort stay"
+    ]
+  },
+  {
+    "id": "sri-lanka",
+    "destinationId": "sri-lanka",
+    "name": "Sri Lanka Island Discovery Tour",
+    "tag": "Pearl of the Indian Ocean",
+    "categories": [
+      "family",
+      "adventure",
+      "honeymoon"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 42999,
+    "rating": 4.7,
+    "img": "sri-lanka-sigiriya-rock",
+    "best": "December to March",
+    "highlights": [
+      "Sigiriya Rock Fortress climb",
+      "Kandy Temple of the Tooth",
+      "Nuwara Eliya tea country",
+      "Yala National Park safari",
+      "Colombo city & beaches"
+    ]
+  },
+  {
+    "id": "bhutan",
+    "destinationId": "bhutan",
+    "name": "Bhutan Monastery Adventure Tour",
+    "tag": "Land of the Thunder Dragon",
+    "categories": [
+      "adventure",
+      "religious",
+      "family"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 39999,
+    "rating": 4.8,
+    "img": "bhutan-tigers-nest-monastery",
+    "best": "March to May, Sept to Nov",
+    "highlights": [
+      "Tiger's Nest Monastery hike",
+      "Punakha Dzong fortress",
+      "Thimphu local sightseeing",
+      "Dochula Pass 108 stupas",
+      "Traditional archery experience"
+    ]
+  },
+  {
+    "id": "nepal",
+    "destinationId": "nepal",
+    "name": "Nepal Himalaya Pilgrimage Tour",
+    "tag": "Roof of the World",
+    "categories": [
+      "adventure",
+      "religious",
+      "family"
+    ],
+    "days": 5,
+    "nights": 4,
+    "price": 28999,
+    "rating": 4.7,
+    "img": "nepal-himalaya-pokhara",
+    "best": "September to May",
+    "highlights": [
+      "Pashupatinath Temple darshan",
+      "Pokhara Phewa Lake boating",
+      "Sarangkot sunrise Himalaya view",
+      "Kathmandu Durbar Square",
+      "Chitwan jungle safari add-on"
+    ]
+  },
+  {
+    "id": "japan",
+    "destinationId": "japan",
+    "name": "Japan Cherry Blossom Luxury Tour",
+    "tag": "Land of the Rising Sun",
+    "categories": [
+      "luxury",
+      "family",
+      "group"
+    ],
+    "days": 7,
+    "nights": 6,
+    "price": 159999,
+    "rating": 4.9,
+    "img": "japan-kyoto-cherry-blossom",
+    "best": "March to May, Oct to Nov",
+    "highlights": [
+      "Mount Fuji & Hakone tour",
+      "Tokyo Shibuya & Asakusa",
+      "Kyoto temples & cherry blossoms",
+      "Shinkansen bullet train ride",
+      "Osaka Castle & street food"
+    ]
+  },
+  {
+    "id": "australia",
+    "destinationId": "australia",
+    "name": "Australia Down Under Adventure Tour",
+    "tag": "Down Under Adventure",
+    "categories": [
+      "luxury",
+      "family",
+      "adventure"
+    ],
+    "days": 8,
+    "nights": 7,
+    "price": 189999,
+    "rating": 4.9,
+    "img": "australia-sydney-opera-house",
+    "best": "September to November",
+    "highlights": [
+      "Sydney Opera House & Harbour Bridge",
+      "Great Barrier Reef snorkelling",
+      "Blue Mountains scenic tour",
+      "Gold Coast theme parks",
+      "Melbourne city exploration"
+    ]
+  },
+  {
+    "id": "new-zealand",
+    "destinationId": "new-zealand",
+    "name": "New Zealand Adventure Honeymoon Package",
+    "tag": "Adventure Capital of the World",
+    "categories": [
+      "luxury",
+      "adventure",
+      "honeymoon"
+    ],
+    "days": 8,
+    "nights": 7,
+    "price": 199999,
+    "rating": 4.9,
+    "img": "new-zealand-milford-sound",
+    "best": "November to March",
+    "highlights": [
+      "Milford Sound cruise",
+      "Queenstown bungee & jet boat",
+      "Hobbiton movie set tour",
+      "Rotorua geothermal wonders",
+      "Auckland Sky Tower"
+    ]
+  },
+  {
+    "id": "egypt",
+    "destinationId": "egypt",
+    "name": "Egypt Pyramids & Nile Cruise Tour",
+    "tag": "Land of the Pharaohs",
+    "categories": [
+      "luxury",
+      "group",
+      "family"
+    ],
+    "days": 6,
+    "nights": 5,
+    "price": 89999,
+    "rating": 4.7,
+    "img": "egypt-pyramids-giza",
+    "best": "October to April",
+    "highlights": [
+      "Giza Pyramids & Sphinx tour",
+      "Nile River dinner cruise",
+      "Egyptian Museum, Cairo",
+      "Luxor Valley of the Kings",
+      "Aswan felucca sailing"
+    ]
+  },
+  {
+    "id": "mauritius-honeymoon-special",
+    "destinationId": "mauritius-honeymoon-special",
+    "name": "Mauritius Honeymoon Special",
+    "tag": "Romantic Island Escape",
+    "categories": [
+      "honeymoon",
+      "luxury"
+    ],
+    "days": 4,
+    "nights": 3,
+    "price": 69999,
+    "rating": 4.9,
+    "img": "mauritius-honeymoon-sunset",
+    "best": "May to December",
+    "highlights": [
+      "Private sunset catamaran cruise",
+      "Couple's spa retreat",
+      "Ile aux Cerfs beach day",
+      "Romantic beachside dinner",
+      "Champagne welcome stay"
+    ]
+  },
+  {
+    "id": "singapore-malaysia-combo",
+    "destinationId": "singapore-malaysia-combo",
+    "name": "Singapore Malaysia Combo",
+    "tag": "Twin Nation Explorer",
+    "categories": [
+      "family",
+      "group"
+    ],
+    "days": 8,
+    "nights": 7,
+    "price": 79999,
+    "rating": 4.7,
+    "img": "singapore-malaysia-combo-skyline",
+    "best": "Year Round",
+    "highlights": [
+      "Sentosa Island & Universal Studios",
+      "Genting Highlands casino resort",
+      "Gardens by the Bay",
+      "Petronas Towers night view",
+      "Kuala Lumpur & Singapore city tours"
+    ]
+  }
+]

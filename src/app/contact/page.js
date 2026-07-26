@@ -6,12 +6,20 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import BookingForm from "@/components/shared/BookingForm";
 import FadeIn from "@/components/ui/FadeIn";
 import { siteConfig, fullAddress } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Contact Us",
-  description: "Get in touch with PKP Holidays for tour bookings, hotel reservations, flight tickets and visa assistance. Call, WhatsApp or visit our Ranchi office.",
-  alternates: { canonical: "/contact" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/contact", {
+    title: "Contact Us",
+    description: "Get in touch with PKP Holidays for tour bookings, hotel reservations, flight tickets and visa assistance. Call, WhatsApp or visit our Ranchi office.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/contact" },
+  };
+}
 
 const contactCards = [
   { icon: Phone, title: "Call Us", value: siteConfig.phone, href: `tel:${siteConfig.phoneRaw}` },

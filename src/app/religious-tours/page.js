@@ -1,10 +1,18 @@
 import CategoryPageTemplate from "@/components/packages/CategoryPageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Religious Tours — Spiritual & Pilgrimage Journeys",
-  description: "Embark on a spiritual journey with PKP Holidays' pilgrimage tour packages to Varanasi, Amritsar, Tirupati, Shirdi, Rishikesh and Bhutan.",
-  alternates: { canonical: "/religious-tours" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/religious-tours", {
+    title: "Religious Tours — Spiritual & Pilgrimage Journeys",
+    description: "Embark on a spiritual journey with PKP Holidays' pilgrimage tour packages to Varanasi, Amritsar, Tirupati, Shirdi, Rishikesh and Bhutan.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/religious-tours" },
+  };
+}
 
 export default function ReligiousToursPage() {
   return (

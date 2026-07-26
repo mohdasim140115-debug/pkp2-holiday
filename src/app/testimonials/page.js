@@ -7,12 +7,20 @@ import RatingStars from "@/components/ui/RatingStars";
 import ContactCta from "@/components/home/ContactCta";
 import FadeIn from "@/components/ui/FadeIn";
 import { testimonials, videoTestimonials } from "@/lib/data/content";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Testimonials — What Our Travelers Say",
-  description: "Read real reviews and testimonials from thousands of happy PKP Holidays travelers across India and around the world.",
-  alternates: { canonical: "/testimonials" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/testimonials", {
+    title: "Testimonials — What Our Travelers Say",
+    description: "Read real reviews and testimonials from thousands of happy PKP Holidays travelers across India and around the world.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/testimonials" },
+  };
+}
 
 export default function TestimonialsPage() {
   return (

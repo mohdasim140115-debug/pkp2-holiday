@@ -4,12 +4,20 @@ import FaqAccordion from "@/components/shared/FaqAccordion";
 import ContactCta from "@/components/home/ContactCta";
 import { siteFaqs } from "@/lib/data/content";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Frequently Asked Questions",
-  description: "Find answers to common questions about booking, payments, cancellations, visa assistance and more at PKP Holidays.",
-  alternates: { canonical: "/faq" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/faq", {
+    title: "Frequently Asked Questions",
+    description: "Find answers to common questions about booking, payments, cancellations, visa assistance and more at PKP Holidays.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/faq" },
+  };
+}
 
 const faqSchema = {
   "@context": "https://schema.org",

@@ -8,19 +8,6 @@ function normalizePayload(body) {
     state: body.state ? String(body.state).trim() : null,
     country: String(body.country || "").trim(),
     type: body.type === "international" ? "international" : "domestic",
-    categories: Array.isArray(body.categories)
-      ? body.categories.map((c) => String(c).trim()).filter(Boolean)
-      : [],
-    days: Number(body.days) || 1,
-    nights: Number(body.nights) || 0,
-    price: Number(body.price) || 0,
-    rating: Number(body.rating) || 4.5,
-    img: String(body.img || "").trim(),
-    tag: String(body.tag || "").trim(),
-    best: String(body.best || "").trim(),
-    highlights: Array.isArray(body.highlights)
-      ? body.highlights.map((h) => String(h).trim()).filter(Boolean)
-      : [],
   };
 }
 

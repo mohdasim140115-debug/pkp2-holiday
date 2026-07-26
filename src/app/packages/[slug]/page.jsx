@@ -11,9 +11,19 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import PackageItinerary from "@/components/package-detail/PackageItinerary";
 import PackageInfoGrid from "@/components/package-detail/PackageInfoGrid";
 import PackageReviews from "@/components/package-detail/PackageReviews";
+import ReviewForm from "@/components/package-detail/ReviewForm";
 import StickyBookingCard from "@/components/package-detail/StickyBookingCard";
 import { getAllPackages, getPackageBySlug } from "@/lib/data/packages";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
+import approvedReviews from "../../../../data/reviews.json";
+
+function reviewsForPackage(pkg) {
+  const submitted = approvedReviews
+    .filter((r) => r.status === "approved" && r.packageSlug === pkg.slug)
+    .map((r) => ({ name: r.name, rating: r.rating, comment: r.comment, date: r.createdAt }));
+  return [...submitted, ...pkg.reviews];
+}
 
 export async function generateStaticParams() {
   return getAllPackages().map((p) => ({ slug: p.slug }));
@@ -24,8 +34,11 @@ export async function generateMetadata({ params }) {
   const pkg = getPackageBySlug(slug);
   if (!pkg) return {};
 
-  const title = `${pkg.title} — ${pkg.durationLabel} | ${siteConfig.name}`;
-  const description = `${pkg.shortDescription} Starting from ₹${pkg.price.toLocaleString("en-IN")} per person. Book with PKP Holidays for the best price guarantee.`;
+  const override = applySeoOverride(`/packages/${pkg.slug}`, {
+    title: `${pkg.title} — ${pkg.durationLabel} | ${siteConfig.name}`,
+    description: `${pkg.shortDescription} Starting from ₹${pkg.price.toLocaleString("en-IN")} per person. Book with PKP Holidays for the best price guarantee.`,
+  });
+  const { title, description } = override;
   const url = `${siteConfig.url}/packages/${pkg.slug}`;
 
   return {
@@ -53,6 +66,7 @@ export default async function PackageDetailPage({ params }) {
   const pkg = getPackageBySlug(slug);
   if (!pkg) notFound();
 
+  const allReviews = reviewsForPackage(pkg);
   const url = `${siteConfig.url}/packages/${pkg.slug}`;
 
   const breadcrumbItems = [
@@ -88,7 +102,7 @@ export default async function PackageDetailPage({ params }) {
       ratingValue: pkg.rating,
       reviewCount: pkg.reviewCount,
     },
-    review: pkg.reviews.map((r) => ({
+    review: allReviews.map((r) => ({
       "@type": "Review",
       author: { "@type": "Person", name: r.name },
       reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
@@ -114,75 +128,86 @@ export default async function PackageDetailPage({ params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-14 sm:pt-40 sm:pb-20 bg-navy-dark overflow-hidden">
-        <Image src={pkg.heroImage} alt={`${pkg.name} tour package`} fill priority sizes="100vw" className="object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/70 to-navy-dark/40" />
+      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-navy-dark overflow-hidden">
+        <Image src={pkg.heroImage} alt={`${pkg.name} tour package`} fill priority sizes="100vw" className="object-cover opacity-50" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy-dark via-navy-dark/60 to-navy-dark/30" />
+        <div className="absolute inset-0 bg-linear-to-r from-navy-dark/70 via-transparent to-transparent" />
         <Container className="relative">
           <Breadcrumb items={breadcrumbItems} light />
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mt-5">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mt-6">
             <div>
-              <div className="flex items-center gap-2 text-white/70 text-sm mb-3">
-                <MapPin className="w-4 h-4 text-sky" /> {pkg.state ? `${pkg.state}, ${pkg.country}` : pkg.country}
+              <div className="inline-flex items-center gap-2 text-sky text-xs sm:text-sm font-semibold uppercase tracking-[0.15em] mb-4">
+                <MapPin className="w-4 h-4" /> {pkg.state ? `${pkg.state}, ${pkg.country}` : pkg.country}
               </div>
-              <h1 className="font-display font-bold text-white text-3xl sm:text-5xl leading-tight max-w-2xl">{pkg.title}</h1>
-              <p className="text-sky mt-2 font-medium">{pkg.tagline}</p>
-              <div className="flex flex-wrap items-center gap-5 mt-5 text-white/80 text-sm">
-                <span className="inline-flex items-center gap-1.5"><Clock className="w-4 h-4 text-sky" /> {pkg.durationLabel}</span>
-                <span className="inline-flex items-center gap-1.5">
-                  <RatingStars rating={pkg.rating} size={14} /> {pkg.rating} ({pkg.reviewCount} reviews)
+              <h1 className="font-display font-bold text-white text-3xl sm:text-5xl lg:text-[3.25rem] leading-[1.1] tracking-tight max-w-2xl">{pkg.title}</h1>
+              <p className="text-white/70 mt-3 text-base sm:text-lg font-display italic">{pkg.tagline}</p>
+              <div className="flex flex-wrap items-center gap-3 mt-7">
+                <span className="inline-flex items-center gap-2 glass text-white text-sm font-medium px-4 py-2 rounded-full">
+                  <Clock className="w-4 h-4 text-sky" /> {pkg.durationLabel}
                 </span>
-                <span className="inline-flex items-center gap-1.5"><Users className="w-4 h-4 text-sky" /> {pkg.type === "international" ? "International" : "Domestic"}</span>
+                <span className="inline-flex items-center gap-2 glass text-white text-sm font-medium px-4 py-2 rounded-full">
+                  <RatingStars rating={pkg.rating} size={14} /> <span className="font-semibold">{pkg.rating}</span> <span className="text-white/60">({pkg.reviewCount})</span>
+                </span>
+                <span className="inline-flex items-center gap-2 glass text-white text-sm font-medium px-4 py-2 rounded-full">
+                  <Users className="w-4 h-4 text-sky" /> {pkg.type === "international" ? "International" : "Domestic"}
+                </span>
               </div>
             </div>
             <ShareButtons url={url} title={pkg.title} />
           </div>
         </Container>
+        <div className="absolute inset-x-0 -bottom-px h-16 bg-linear-to-t from-offwhite to-transparent pointer-events-none" />
       </section>
 
-      <Container className="py-10 sm:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-8 space-y-14">
-            <div>
-              <SectionHeading eyebrow="Overview" title={`About This ${pkg.name} Tour`} align="left" className="mb-6" />
-              <p className="text-navy/70 leading-relaxed mb-6">{pkg.overview}</p>
-              <div className="flex flex-wrap gap-2.5">
-                {pkg.highlights.map((h) => (
-                  <span key={h} className="bg-sky/10 text-blue text-sm font-medium px-4 py-2 rounded-full">{h}</span>
-                ))}
+      <div className="bg-offwhite">
+        <Container className="py-12 sm:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+            <div className="lg:col-span-8 space-y-16">
+              <div>
+                <SectionHeading eyebrow="Overview" title="About This Package" align="left" className="mb-6" />
+                <p className="text-navy/70 text-base leading-loose mb-7">{pkg.overview}</p>
+                <div className="flex flex-wrap gap-2.5">
+                  {pkg.highlights.map((h) => (
+                    <span key={h} className="bg-white ring-1 ring-navy/10 luxury-shadow text-navy text-sm font-semibold px-4 py-2 rounded-full">{h}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <SectionHeading eyebrow="Itinerary" title="Day Wise Tour Itinerary" align="left" className="mb-6" />
+                <PackageItinerary itinerary={pkg.itinerary} />
+              </div>
+
+              <div>
+                <SectionHeading eyebrow="Trip Details" title="Inclusions, Hotels & More" align="left" className="mb-6" />
+                <PackageInfoGrid pkg={pkg} />
+              </div>
+
+              <div>
+                <SectionHeading eyebrow="Reviews" title="What Our Travelers Say" align="left" className="mb-6" />
+                <PackageReviews pkg={{ ...pkg, reviews: allReviews }} />
+                <div className="mt-6 max-w-lg">
+                  <ReviewForm packageSlug={pkg.slug} packageName={pkg.name} />
+                </div>
+              </div>
+
+              <div>
+                <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" align="left" className="mb-6" />
+                <FaqAccordion faqs={pkg.faqs} />
+              </div>
+
+              <div id="enquire">
+                <SectionHeading eyebrow="Enquiry" title={`Plan Your ${pkg.destinationName} Trip`} align="left" className="mb-6" />
+                <BookingForm destination={pkg.destinationName} title="" subtitle="" />
               </div>
             </div>
 
-            <div>
-              <SectionHeading eyebrow="Itinerary" title="Day Wise Tour Itinerary" align="left" className="mb-6" />
-              <PackageItinerary itinerary={pkg.itinerary} />
-            </div>
-
-            <div>
-              <SectionHeading eyebrow="Trip Details" title="Inclusions, Hotels & More" align="left" className="mb-6" />
-              <PackageInfoGrid pkg={pkg} />
-            </div>
-
-            <div>
-              <SectionHeading eyebrow="Reviews" title="What Our Travelers Say" align="left" className="mb-6" />
-              <PackageReviews pkg={pkg} />
-            </div>
-
-            <div>
-              <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" align="left" className="mb-6" />
-              <FaqAccordion faqs={pkg.faqs} />
-            </div>
-
-            <div id="enquire">
-              <SectionHeading eyebrow="Enquiry" title={`Plan Your ${pkg.name} Trip`} align="left" className="mb-6" />
-              <BookingForm destination={pkg.name} title="" subtitle="" />
+            <div className="lg:col-span-4">
+              <StickyBookingCard pkg={pkg} />
             </div>
           </div>
-
-          <div className="lg:col-span-4">
-            <StickyBookingCard pkg={pkg} />
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </>
   );
 }

@@ -6,12 +6,20 @@ import BookingForm from "@/components/shared/BookingForm";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { getPackagesByCategory } from "@/lib/data/packages";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "Corporate Tours — MICE & Offsite Travel Management",
-  description: "PKP Holidays plans corporate offsites, MICE events, incentive travel and team outings with end-to-end logistics and dedicated support.",
-  alternates: { canonical: "/corporate-tours" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/corporate-tours", {
+    title: "Corporate Tours — MICE & Offsite Travel Management",
+    description: "PKP Holidays plans corporate offsites, MICE events, incentive travel and team outings with end-to-end logistics and dedicated support.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/corporate-tours" },
+  };
+}
 
 const offerings = [
   { title: "Team Offsites", desc: "Fun, well-organized retreats that boost team morale and collaboration.", icon: Users },

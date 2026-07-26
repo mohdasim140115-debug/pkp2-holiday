@@ -29,13 +29,13 @@ function tagsForSeed(seed) {
 }
 
 function heroImage(seed) {
-  return destinationImages[seed.name] || travelImage([seed.name, ...tagsForSeed(seed)], 1600, 1000, `${seed.name}-hero`);
+  return destinationImages[seed.destinationName] || travelImage([seed.destinationName, ...tagsForSeed(seed)], 1600, 1000, `${seed.name}-hero`);
 }
 function galleryImages(seed, count = 8) {
   const tags = tagsForSeed(seed);
-  const primary = destinationImages[seed.name];
+  const primary = destinationImages[seed.destinationName];
   return Array.from({ length: count }, (_, i) =>
-    i === 0 && primary ? primary : travelImage([seed.name, tags[i % tags.length]], 900, 650, `${seed.name}-g${i}`)
+    i === 0 && primary ? primary : travelImage([seed.destinationName, tags[i % tags.length]], 900, 650, `${seed.name}-g${i}`)
   );
 }
 
@@ -90,12 +90,13 @@ function buildExclusions(seed) {
 }
 
 function buildItinerary(seed) {
+  const place = seed.destinationName;
   const days = [];
   const highlights = seed.highlights;
   days.push({
     day: 1,
-    title: `Arrival in ${seed.name}`,
-    description: `On arrival at ${seed.name}, our representative will welcome you and transfer you to your hotel. Spend the rest of the day at leisure, settling in and exploring the local surroundings at your own pace. Overnight stay at the hotel.`,
+    title: `Arrival in ${place}`,
+    description: `On arrival at ${place}, our representative will welcome you and transfer you to your hotel. Spend the rest of the day at leisure, settling in and exploring the local surroundings at your own pace. Overnight stay at the hotel.`,
     activities: ["Airport / station pickup", "Hotel check-in", "Evening at leisure"],
   });
 
@@ -104,8 +105,8 @@ function buildItinerary(seed) {
     const dayHighlights = pick(highlights, 2, d * 2);
     days.push({
       day: d + 2,
-      title: `${seed.name} Sightseeing — ${dayHighlights[0]}`,
-      description: `After breakfast, set out to experience the best of ${seed.name}. Today's journey covers ${dayHighlights.join(" and ")}, with plenty of time for photography and relaxation. Return to the hotel for a comfortable overnight stay.`,
+      title: `${place} Sightseeing — ${dayHighlights[0]}`,
+      description: `After breakfast, set out to experience the best of ${place}. Today's journey covers ${dayHighlights.join(" and ")}, with plenty of time for photography and relaxation. Return to the hotel for a comfortable overnight stay.`,
       activities: dayHighlights,
     });
   }
@@ -113,8 +114,8 @@ function buildItinerary(seed) {
   if (seed.days > 1) {
     days.push({
       day: seed.days,
-      title: `Departure from ${seed.name}`,
-      description: `Enjoy breakfast at the hotel and, depending on your flight/train timing, some last-minute shopping or leisure time. Our representative will transfer you to the airport/station for your onward journey with unforgettable memories of ${seed.name}.`,
+      title: `Departure from ${place}`,
+      description: `Enjoy breakfast at the hotel and, depending on your flight/train timing, some last-minute shopping or leisure time. Our representative will transfer you to the airport/station for your onward journey with unforgettable memories of ${place}.`,
       activities: ["Breakfast at hotel", "Last minute shopping", "Transfer to airport/station"],
     });
   }
@@ -122,32 +123,35 @@ function buildItinerary(seed) {
 }
 
 function buildHotels(seed, tier) {
+  const place = seed.destinationName;
   const stars = tier === "luxury" ? 5 : tier === "premium" ? 4 : 3;
   return [
-    { name: `The Grand ${seed.name} Palace`, category: `${stars} Star`, location: `Central ${seed.name}` },
-    { name: `${seed.name} Hillview Resort & Spa`, category: `${stars} Star`, location: `${seed.name} Outskirts` },
-    { name: `Lake ${seed.name} Boutique Stay`, category: `${Math.max(stars - 1, 3)} Star`, location: `Near ${seed.name} City Center` },
+    { name: `The Grand ${place} Palace`, category: `${stars} Star`, location: `Central ${place}` },
+    { name: `${place} Hillview Resort & Spa`, category: `${stars} Star`, location: `${place} Outskirts` },
+    { name: `Lake ${place} Boutique Stay`, category: `${Math.max(stars - 1, 3)} Star`, location: `Near ${place} City Center` },
   ];
 }
 
 function buildFaqs(seed) {
+  const place = seed.destinationName;
   return [
-    { q: `What is the best time to visit ${seed.name}?`, a: `The best time to visit ${seed.name} is ${seed.best}, when the weather is most pleasant for sightseeing and outdoor activities.` },
-    { q: `How many days are ideal for a ${seed.name} trip?`, a: `Our recommended itinerary for ${seed.name} is ${seed.nights} Nights / ${seed.days} Days, which comfortably covers all major highlights. It can be customized based on your preferences.` },
-    { q: `Is this ${seed.name} package customizable?`, a: `Yes, every PKP Holidays package including this ${seed.name} tour can be fully customized — hotel category, duration, activities and travel dates can all be tailored to your needs.` },
-    { q: `What is included in the ${seed.name} package price?`, a: `The price includes accommodation, breakfast, all transfers and sightseeing as per the itinerary, and support from our tour manager. Please refer to the Inclusions section for full details.` },
+    { q: `What is the best time to visit ${place}?`, a: `The best time to visit ${place} is ${seed.best}, when the weather is most pleasant for sightseeing and outdoor activities.` },
+    { q: `How many days are ideal for a ${place} trip?`, a: `Our recommended itinerary for ${place} is ${seed.nights} Nights / ${seed.days} Days, which comfortably covers all major highlights. It can be customized based on your preferences.` },
+    { q: `Is this ${seed.name} customizable?`, a: `Yes, every PKP Holidays package including this ${seed.name} can be fully customized — hotel category, duration, activities and travel dates can all be tailored to your needs.` },
+    { q: `What is included in the ${seed.name} price?`, a: `The price includes accommodation, breakfast, all transfers and sightseeing as per the itinerary, and support from our tour manager. Please refer to the Inclusions section for full details.` },
     { q: `Do you provide EMI or installment payment options?`, a: `Yes, we offer flexible payment plans and EMI options on select packages. Contact our travel experts on WhatsApp or call for more details.` },
   ];
 }
 
 function buildReviews(seed) {
+  const place = seed.destinationName;
   const comments = [
-    `Our trip to ${seed.name} was absolutely magical! PKP Holidays took care of every little detail.`,
-    `Well organized itinerary for ${seed.name}, comfortable hotels and a super friendly tour manager. Highly recommend!`,
-    `${seed.name} exceeded our expectations. Great value for money and zero hassle from start to finish.`,
+    `Our trip to ${place} was absolutely magical! PKP Holidays took care of every little detail.`,
+    `Well organized itinerary for ${place}, comfortable hotels and a super friendly tour manager. Highly recommend!`,
+    `${place} exceeded our expectations. Great value for money and zero hassle from start to finish.`,
   ];
   return comments.map((comment, i) => ({
-    name: REVIEWER_NAMES[(REVIEWER_NAMES.length + i * 3 + seed.name.length) % REVIEWER_NAMES.length],
+    name: REVIEWER_NAMES[(REVIEWER_NAMES.length + i * 3 + place.length) % REVIEWER_NAMES.length],
     rating: Math.max(4, Math.round(seed.rating)),
     date: "2026-0" + ((i % 6) + 1) + "-1" + i,
     comment,
@@ -170,7 +174,8 @@ export const packages = destinationSeeds.map((seed) => {
   return {
     slug,
     name: seed.name,
-    title: `${seed.name} Tour Package`,
+    destinationName: seed.destinationName,
+    title: seed.name,
     tagline: seed.tag,
     country: seed.country,
     state: seed.state || null,
@@ -187,8 +192,8 @@ export const packages = destinationSeeds.map((seed) => {
     heroImage: heroImage(seed),
     gallery: galleryImages(seed, 8),
     video: null,
-    shortDescription: `Discover ${seed.name}, ${seed.tag.toLowerCase()}, with our specially curated ${seed.nights}N/${seed.days}D tour package featuring handpicked hotels, guided sightseeing and seamless travel arrangements.`,
-    overview: `${seed.name} is one of ${seed.type === "international" ? "the world's" : "India's"} most sought-after destinations, known as the "${seed.tag}". This ${seed.nights} Nights / ${seed.days} Days tour by PKP Holidays is thoughtfully designed to help you experience the very best of ${seed.name} — from iconic landmarks and natural wonders to authentic local culture and cuisine. Travel in comfort with handpicked ${stars}-star accommodations, private transfers, and the support of our experienced travel experts at every step, so all you need to do is enjoy the journey.`,
+    shortDescription: `Discover ${seed.destinationName}, ${seed.tag.toLowerCase()}, with our specially curated ${seed.nights}N/${seed.days}D tour package featuring handpicked hotels, guided sightseeing and seamless travel arrangements.`,
+    overview: `${seed.destinationName} is one of ${seed.type === "international" ? "the world's" : "India's"} most sought-after destinations, known as the "${seed.tag}". This ${seed.nights} Nights / ${seed.days} Days tour by PKP Holidays is thoughtfully designed to help you experience the very best of ${seed.destinationName} — from iconic landmarks and natural wonders to authentic local culture and cuisine. Travel in comfort with handpicked ${stars}-star accommodations, private transfers, and the support of our experienced travel experts at every step, so all you need to do is enjoy the journey.`,
   highlights: seed.highlights,
     itinerary: buildItinerary(seed),
     inclusions: buildInclusions(seed, tier),
@@ -204,7 +209,7 @@ export const packages = destinationSeeds.map((seed) => {
     packingTips: buildPackingTips(seed),
     faqs: buildFaqs(seed),
     reviews: buildReviews(seed),
-    mapQuery: encodeURIComponent(`${seed.name} ${seed.state || seed.country}`),
+    mapQuery: encodeURIComponent(`${seed.destinationName} ${seed.state || seed.country}`),
   };
 });
 

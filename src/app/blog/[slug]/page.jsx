@@ -7,6 +7,7 @@ import Breadcrumb, { breadcrumbSchema } from "@/components/shared/Breadcrumb";
 import ShareButtons from "@/components/shared/ShareButtons";
 import { blogs, getBlogBySlug, getRelatedBlogs } from "@/lib/data/blogs";
 import { siteConfig } from "@/lib/site";
+import { applySeoOverride } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return blogs.map((b) => ({ slug: b.slug }));
@@ -16,8 +17,10 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const blog = getBlogBySlug(slug);
   if (!blog) return {};
-  const title = blog.title;
-  const description = blog.excerpt;
+  const { title, description } = applySeoOverride(`/blog/${blog.slug}`, {
+    title: blog.title,
+    description: blog.excerpt,
+  });
   const url = `${siteConfig.url}/blog/${blog.slug}`;
   return {
     title,

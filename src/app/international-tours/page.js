@@ -1,10 +1,18 @@
 import CategoryPageTemplate from "@/components/packages/CategoryPageTemplate";
+import { applySeoOverride } from "@/lib/seo";
 
-export const metadata = {
-  title: "International Tour Packages — Journeys Across The Globe",
-  description: "Explore PKP Holidays' curated international tour packages to Bali, Dubai, Thailand, Singapore, Switzerland, Maldives and more.",
-  alternates: { canonical: "/international-tours" },
-};
+export async function generateMetadata() {
+  const { title, description } = applySeoOverride("/international-tours", {
+    title: "International Tour Packages — Journeys Across The Globe",
+    description: "Explore PKP Holidays' curated international tour packages to Bali, Dubai, Thailand, Singapore, Switzerland, Maldives and more.",
+  });
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/international-tours" },
+  };
+}
 
 export default function InternationalToursPage() {
   return (
